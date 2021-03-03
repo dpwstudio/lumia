@@ -38,12 +38,14 @@
          </div>
          <div class="col-sm-4 sm-margin-b-30">
            <h4>Contactez-nous</h4>
-           <input type="text" class="form-control footer-input margin-b-20" placeholder="Nom" required>
-           <input type="email" class="form-control footer-input margin-b-20" placeholder="Email" required>
-           <input type="text" class="form-control footer-input margin-b-20" placeholder="Téléphone" required>
-           <textarea class="form-control footer-input margin-b-30" rows="6" placeholder="Message" required></textarea>
-           <button type="submit" class="btn-theme btn-theme-sm btn-base-bg text-uppercase"
-             style="border-radius: 5px;">Envoyer</button>
+           <form [formGroup]="contactForm">
+             <input type="text" class="form-control footer-input margin-b-20" formControlName="name" placeholder="Nom" required>
+             <input type="email" class="form-control footer-input margin-b-20" formControlName="email" placeholder="Email" required>
+             <input type="text" class="form-control footer-input margin-b-20" formControlName="phone" placeholder="Téléphone" required>
+             <textarea class="form-control footer-input margin-b-30" rows="6" formControlName="message" placeholder="Message" required></textarea>
+             <button type="submit" class="btn-theme btn-theme-sm btn-base-bg text-uppercase"[disabled]="!contactForm.valid"
+             (click)="sendEmail()" style="border-radius: 5px;">Envoyer</button>
+           </form>
          </div>
        </div>
        <!--// end row -->

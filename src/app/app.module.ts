@@ -12,6 +12,8 @@ import { PortailModule } from './modules/portail/portail.module';
 import { PorteModule } from './modules/porte/porte.module';
 import { BaieModule } from './modules/baie/baie.module';
 import { SharedModule } from './modules/shared/shared.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,7 @@ import { SharedModule } from './modules/shared/shared.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     LayoutModule,
     HomeModule,
     FenetreModule,

@@ -551,7 +551,7 @@ fieldset[disabled] .btn-theme {
   width: 21px;
   height: 1px;
   display: inline-block;
-  background: #515769;
+  background: #fff;
   transition-duration: .3s;
   transition-property: all;
   transition-timing-function: cubic-bezier(.7, 1, .7, 1)
@@ -561,7 +561,7 @@ fieldset[disabled] .btn-theme {
 .header .navbar-toggle .toggle-icon:before {
   position: absolute;
   left: 0;
-  background: #515769;
+  background: #fff;
   content: " "
 }
 
@@ -590,7 +590,7 @@ fieldset[disabled] .btn-theme {
 }
 
 .header .navbar-toggle:hover .toggle-icon {
-  background: #3164B3;
+  background: #fff;
   transition-duration: .3s;
   transition-property: all;
   transition-timing-function: cubic-bezier(.7, 1, .7, 1)
@@ -600,7 +600,7 @@ fieldset[disabled] .btn-theme {
 .header .navbar-toggle:hover .toggle-icon:before {
   width: 21px;
   height: 1px;
-  background: #3164B3;
+  background: #fff;
   transition-duration: .3s;
   transition-property: all;
   transition-timing-function: cubic-bezier(.7, 1, .7, 1)

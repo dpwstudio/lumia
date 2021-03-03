@@ -26,7 +26,13 @@
 
 @media (max-width: 991px) {
   .header {
-      background: #ffffff;
-      box-shadow: rgb(0 0 0 / 19%) 0px 1px 7px 0px;
+      background: transparent;
+      box-shadow: none;
+
+      ul {
+        background-color: #fffffff2;
+        border-radius: 5px;
+        padding: 10px 0;
+      }
   }
 }

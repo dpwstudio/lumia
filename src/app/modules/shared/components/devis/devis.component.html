@@ -5,7 +5,7 @@
     <div class="wizard-container animated bounceIn">
       <i (click)="toggleDevis()" class="service-icon icon-close"></i>
       <div class="card wizard-card" data-color="red" id="wizard">
-        <form action="" method="">
+        <form [formGroup]="devisForm">
           <!--        You can switch " data-color="blue" "  with one of the next bright colors: "green", "orange", "red", "purple"             -->
           <div class="wizard-header">
             <h3 class="wizard-title">
@@ -28,9 +28,9 @@
               <h4 class="info-text">QUEL TYPE DE PRODUIT RECHERCHEZ-VOUS ?</h4>
               <div class="row">
                 <div class="col-sm-4 col-xs-6">
-                  <a href="#fenetres" data-toggle="tab">
+                  <a href="#fenetres" data-toggle="tab" (click)="setCategory('Fenêtres et porte-fenêtres')">
                     <div class="choice" data-toggle="wizard-radio" rel="tooltip">
-                      <input type="radio" name="category" value="Design">
+                      <input type="radio" formControlName="category" value="Fenêtres et porte-fenêtres">
                       <div class="icon">
                         <img src="assets/img/icone/icone-fenetre.png" alt="" width="60">
                       </div>
@@ -39,9 +39,9 @@
                   </a>
                 </div>
                 <div class="col-sm-4 col-xs-6">
-                  <a href="#baies" data-toggle="tab">
+                  <a href="#baies" data-toggle="tab" (click)="setCategory('Baie coulissante')">
                     <div class="choice" data-toggle="wizard-radio" rel="tooltip">
-                      <input type="radio" name="baie" value="Baie coulissante">
+                      <input type="radio" formControlName="category" value="Baie coulissante">
                       <div class="icon">
                         <img src="assets/img/icone/icone-baie.png" alt="" width="60">
                       </div>
@@ -50,9 +50,9 @@
                   </a>
                 </div>
                 <div class="col-sm-4 col-xs-6">
-                  <a href="#volets" data-toggle="tab">
+                  <a href="#volets" data-toggle="tab" (click)="setCategory('Volets')">
                     <div class="choice" data-toggle="wizard-radio" rel="tooltip">
-                      <input type="radio" name="job" value="Code">
+                      <input type="radio" formControlName="category" value="Volets">
                       <div class="icon">
                         <img src="assets/img/icone/icone-volet.png" alt="" width="75">
                       </div>
@@ -61,9 +61,9 @@
                   </a>
                 </div>
                 <div class="col-sm-4 col-xs-6">
-                  <a href="#portes" data-toggle="tab">
+                  <a href="#portes" data-toggle="tab" (click)="setCategory('Porte d\'entrée')">
                     <div class="choice" data-toggle="wizard-radio" rel="tooltip">
-                      <input type="radio" name="job" value="Design">
+                      <input type="radio" formControlName="category" value="Porte d'entrée">
                       <div class="icon">
                         <img src="assets/img/icone/icone-porte.png" alt="" width="60">
                       </div>
@@ -72,9 +72,9 @@
                   </a>
                 </div>
                 <div class="col-sm-4 col-xs-6">
-                  <a href="#portails" data-toggle="tab">
+                  <a href="#portails" data-toggle="tab" (click)="setCategory('Portails et clôtures')">
                     <div class="choice" data-toggle="wizard-radio" rel="tooltip">
-                      <input type="radio" name="job" value="Code">
+                      <input type="radio" formControlName="category" value="Portails et clôtures">
                       <div class="icon">
                         <img src="assets/img/icone/icone-portail.png" alt="" width="75">
                       </div>
@@ -90,9 +90,9 @@
               <h4 class="info-text">QUELLES FENÊTRES RECHERCHEZ-VOUS ? </h4>
               <div class="row">
                 <div class="col-sm-4 col-xs-6">
-                  <a href="#qty" data-toggle="tab">
+                  <a href="#qty" data-toggle="tab" (click)="setProductModel('Fenêtres PVC')">
                     <div class="choice" data-toggle="wizard-radio" rel="tooltip">
-                      <input type="radio" name="job" value="Design">
+                      <input type="radio" formControlName="productModel" value="Fenêtres PVC">
                       <div class="icon">
                         <img src="assets/img/icone/icone-fenetre.png" alt="" width="60">
                       </div>
@@ -101,9 +101,9 @@
                   </a>
                 </div>
                 <div class="col-sm-4 col-xs-6">
-                  <a href="#qty" data-toggle="tab">
+                  <a href="#qty" data-toggle="tab" (click)="setProductModel('Fenêtres Bois')">
                     <div class="choice" data-toggle="wizard-radio" rel="tooltip">
-                      <input type="radio" name="job" value="Code">
+                      <input type="radio" formControlName="productModel" value="Fenêtres Bois">
                       <div class="icon">
                         <img src="assets/img/icone/icone-fenetre.png" alt="" width="60">
                       </div>
@@ -112,10 +112,9 @@
                   </a>
                 </div>
                 <div class="col-sm-4 col-xs-6">
-                  <a href="#qty" data-toggle="tab">
-                    <div class="choice" data-toggle="wizard-radio" rel="tooltip"
-                      title="Select this option if you are coming with your team.">
-                      <input type="radio" name="job" value="Code">
+                  <a href="#qty" data-toggle="tab" (click)="setProductModel('Fenêtres aluminium')">
+                    <div class="choice" data-toggle="wizard-radio" rel="tooltip">
+                      <input type="radio" formControlName="productModel" value="Fenêtres aluminium">
                       <div class="icon">
                         <img src="assets/img/icone/icone-fenetre.png" alt="" width="60">
                       </div>
@@ -131,10 +130,9 @@
               <h4 class="info-text">QUELLES BAIES COULISSANTES RECHERCHEZ-VOUS ? </h4>
               <div class="row">
                 <div class="col-sm-4 col-xs-6">
-                  <a href="#qty" data-toggle="tab">
-                    <div class="choice" data-toggle="wizard-radio" rel="tooltip"
-                      title="This is good if you travel alone.">
-                      <input type="radio" name="job" value="Design">
+                  <a href="#qty" data-toggle="tab" (click)="setProductModel('Baies PVC')">
+                    <div class="choice" data-toggle="wizard-radio" rel="tooltip">
+                      <input type="radio" formControlName="productModel" value="Baies PVC">
                       <div class="icon">
                         <img src="assets/img/icone/icone-baie.png" alt="" width="60">
                       </div>
@@ -143,10 +141,9 @@
                   </a>
                 </div>
                 <div class="col-sm-4 col-xs-6">
-                  <a href="#qty" data-toggle="tab">
-                    <div class="choice" data-toggle="wizard-radio" rel="tooltip"
-                      title="Select this room if you're traveling with your family.">
-                      <input type="radio" name="job" value="Code">
+                  <a href="#qty" data-toggle="tab" (click)="setProductModel('Baies Bois')">
+                    <div class="choice" data-toggle="wizard-radio" rel="tooltip">
+                      <input type="radio" formControlName="productModel" value="Baies Bois">
                       <div class="icon">
                         <img src="assets/img/icone/icone-baie.png" alt="" width="60">
                       </div>
@@ -155,10 +152,9 @@
                   </a>
                 </div>
                 <div class="col-sm-4 col-xs-6">
-                  <a href="#qty" data-toggle="tab">
-                    <div class="choice" data-toggle="wizard-radio" rel="tooltip"
-                      title="Select this option if you are coming with your team.">
-                      <input type="radio" name="job" value="Code">
+                  <a href="#qty" data-toggle="tab" (click)="setProductModel('Baies aluminium')">
+                    <div class="choice" data-toggle="wizard-radio" rel="tooltip">
+                      <input type="radio" formControlName="productModel" value="Baies aluminium">
                       <div class="icon">
                         <img src="assets/img/icone/icone-baie.png" alt="" width="60">
                       </div>
@@ -174,10 +170,10 @@
               <h4 class="info-text">QUELLES PORTES RECHERCHEZ-VOUS ? </h4>
               <div class="row">
                 <div class="col-sm-4 col-xs-6">
-                  <a href="#qty" data-toggle="tab">
+                  <a href="#qty" data-toggle="tab" (click)="setProductModel('Volets PVC')">
                     <div class="choice" data-toggle="wizard-radio" rel="tooltip"
                       title="This is good if you travel alone.">
-                      <input type="radio" name="job" value="Design">
+                      <input type="radio" formControlName="productModel" value="Volets PVC">
                       <div class="icon">
                         <img src="assets/img/icone/icone-volet.png" alt="" width="60">
                       </div>
@@ -186,10 +182,9 @@
                   </a>
                 </div>
                 <div class="col-sm-4 col-xs-6">
-                  <a href="#qty" data-toggle="tab">
-                    <div class="choice" data-toggle="wizard-radio" rel="tooltip"
-                      title="Select this room if you're traveling with your family.">
-                      <input type="radio" name="job" value="Code">
+                  <a href="#qty" data-toggle="tab" (click)="setProductModel('Volets Bois')">
+                    <div class="choice" data-toggle="wizard-radio" rel="tooltip">
+                      <input type="radio" formControlName="productModel" value="Volets Bois">
                       <div class="icon">
                         <img src="assets/img/icone/icone-volet.png" alt="" width="60">
                       </div>
@@ -198,10 +193,9 @@
                   </a>
                 </div>
                 <div class="col-sm-4 col-xs-6">
-                  <a href="#qty" data-toggle="tab">
-                    <div class="choice" data-toggle="wizard-radio" rel="tooltip"
-                      title="Select this option if you are coming with your team.">
-                      <input type="radio" name="job" value="Code">
+                  <a href="#qty" data-toggle="tab" (click)="setProductModel('Volets aluminium')">
+                    <div class="choice" data-toggle="wizard-radio" rel="tooltip">
+                      <input type="radio" formControlName="productModel" value="Volets aluminium">
                       <div class="icon">
                         <img src="assets/img/icone/icone-volet.png" alt="" width="60">
                       </div>
@@ -215,10 +209,9 @@
               <h4 class="info-text">QUELLE PORTE RECHERCHEZ-VOUS ? </h4>
               <div class="row">
                 <div class="col-sm-4 col-xs-6">
-                  <a href="#qty" data-toggle="tab">
-                    <div class="choice" data-toggle="wizard-radio" rel="tooltip"
-                      title="This is good if you travel alone.">
-                      <input type="radio" name="job" value="Design">
+                  <a href="#qty" data-toggle="tab" (click)="setProductModel('Porte d\'entrée PVC')">
+                    <div class="choice" data-toggle="wizard-radio" rel="tooltip">
+                      <input type="radio" formControlName="productModel" value="Porte d'entrée PVC">
                       <div class="icon">
                         <img src="assets/img/icone/icone-porte.png" alt="" width="60">
                       </div>
@@ -227,10 +220,9 @@
                   </a>
                 </div>
                 <div class="col-sm-4 col-xs-6">
-                  <a href="#qty" data-toggle="tab">
-                    <div class="choice" data-toggle="wizard-radio" rel="tooltip"
-                      title="Select this room if you're traveling with your family.">
-                      <input type="radio" name="job" value="Code">
+                  <a href="#qty" data-toggle="tab" (click)="setProductModel('Porte d\'entrée Bois')">
+                    <div class="choice" data-toggle="wizard-radio" rel="tooltip">
+                      <input type="radio" formControlName="productModel" value="Porte d'entrée Bois">
                       <div class="icon">
                         <img src="assets/img/icone/icone-porte.png" alt="" width="60">
                       </div>
@@ -239,10 +231,9 @@
                   </a>
                 </div>
                 <div class="col-sm-4 col-xs-6">
-                  <a href="#qty" data-toggle="tab">
-                    <div class="choice" data-toggle="wizard-radio" rel="tooltip"
-                      title="Select this option if you are coming with your team.">
-                      <input type="radio" name="job" value="Code">
+                  <a href="#qty" data-toggle="tab" (click)="setProductModel('Porte d\'entrée aluminium')">
+                    <div class="choice" data-toggle="wizard-radio" rel="tooltip">
+                      <input type="radio" formControlName="productModel" value="Porte d'entrée aluminium">
                       <div class="icon">
                         <img src="assets/img/icone/icone-porte.png" alt="" width="60">
                       </div>
@@ -256,10 +247,9 @@
               <h4 class="info-text">QUELLES PORTAILS RECHERCHEZ-VOUS ? </h4>
               <div class="row">
                 <div class="col-sm-4 col-xs-6">
-                  <a href="#qty" data-toggle="tab">
-                    <div class="choice" data-toggle="wizard-radio" rel="tooltip"
-                      title="This is good if you travel alone.">
-                      <input type="radio" name="job" value="Design">
+                  <a href="#qty" data-toggle="tab" (click)="setProductModel('Portails PVC')">
+                    <div class="choice" data-toggle="wizard-radio" rel="tooltip">
+                      <input type="radio" formControlName="productModel" value="Portails PVC">
                       <div class="icon">
                         <img src="assets/img/icone/icone-portail.png" alt="" width="60">
                       </div>
@@ -268,10 +258,10 @@
                   </a>
                 </div>
                 <div class="col-sm-4 col-xs-6">
-                  <a href="#qty" data-toggle="tab">
+                  <a href="#qty" data-toggle="tab" (click)="setProductModel('Portails Bois')">
                     <div class="choice" data-toggle="wizard-radio" rel="tooltip"
-                      title="Select this room if you're traveling with your family.">
-                      <input type="radio" name="job" value="Code">
+                      >
+                      <input type="radio" formControlName="productModel" value="Portails Bois">
                       <div class="icon">
                         <img src="assets/img/icone/icone-portail.png" alt="" width="60">
                       </div>
@@ -280,10 +270,9 @@
                   </a>
                 </div>
                 <div class="col-sm-4 col-xs-6">
-                  <a href="#qty" data-toggle="tab">
-                    <div class="choice" data-toggle="wizard-radio" rel="tooltip"
-                      title="Select this option if you are coming with your team.">
-                      <input type="radio" name="job" value="Code">
+                  <a href="#qty" data-toggle="tab" (click)="setProductModel('Portails aluminium')">
+                    <div class="choice" data-toggle="wizard-radio" rel="tooltip">
+                      <input type="radio" formControlName="productModel" value="Portails aluminium">
                       <div class="icon">
                         <img src="assets/img/icone/icone-portail.png" alt="" width="60">
                       </div>
@@ -297,10 +286,9 @@
               <h4 class="info-text">COMBIEN SOUHAITEZ-VOUS EN CHANGER ?</h4>
               <div class="row">
                 <div class="col-sm-4 col-xs-6">
-                  <a href="#projectType" data-toggle="tab">
-                    <div class="choice" data-toggle="wizard-radio" rel="tooltip"
-                      title="This is good if you travel alone.">
-                      <input type="radio" name="job" value="Design">
+                  <a href="#projectType" data-toggle="tab" (click)="setQty('1')">
+                    <div class="choice" data-toggle="wizard-radio" rel="tooltip">
+                      <input type="radio" formControlName="qty" value="1">
                       <div class="icon">
                         1
                       </div>
@@ -308,10 +296,9 @@
                   </a>
                 </div>
                 <div class="col-sm-4 col-xs-6">
-                  <a href="#projectType" data-toggle="tab">
-                    <div class="choice" data-toggle="wizard-radio" rel="tooltip"
-                      title="Select this room if you're traveling with your family.">
-                      <input type="radio" name="job" value="Code">
+                  <a href="#projectType" data-toggle="tab" (click)="setQty('2')">
+                    <div class="choice" data-toggle="wizard-radio" rel="tooltip">
+                      <input type="radio" formControlName="qty" value="2">
                       <div class="icon">
                         2
                       </div>
@@ -319,10 +306,9 @@
                   </a>
                 </div>
                 <div class="col-sm-4 col-xs-6">
-                  <a href="#projectType" data-toggle="tab">
-                    <div class="choice" data-toggle="wizard-radio" rel="tooltip"
-                      title="Select this option if you are coming with your team.">
-                      <input type="radio" name="job" value="Code">
+                  <a href="#projectType" data-toggle="tab" (click)="setQty('3')">
+                    <div class="choice" data-toggle="wizard-radio" rel="tooltip">
+                      <input type="radio" formControlName="qty" value="3">
                       <div class="icon">
                         3
                       </div>
@@ -330,10 +316,9 @@
                   </a>
                 </div>
                 <div class="col-sm-4 col-xs-6">
-                  <a href="#projectType" data-toggle="tab">
-                    <div class="choice" data-toggle="wizard-radio" rel="tooltip"
-                      title="This is good if you travel alone.">
-                      <input type="radio" name="job" value="Design">
+                  <a href="#projectType" data-toggle="tab" (click)="setQty('4')">
+                    <div class="choice" data-toggle="wizard-radio" rel="tooltip">
+                      <input type="radio" formControlName="qty" value="4">
                       <div class="icon">
                         4
                       </div>
@@ -341,10 +326,10 @@
                   </a>
                 </div>
                 <div class="col-sm-4 col-xs-6">
-                  <a href="#projectType" data-toggle="tab">
+                  <a href="#projectType" data-toggle="tab" (click)="setQty('5')">
                     <div class="choice" data-toggle="wizard-radio" rel="tooltip"
-                      title="Select this room if you're traveling with your family.">
-                      <input type="radio" name="job" value="Code">
+                      >
+                      <input type="radio" formControlName="qty" value="5">
                       <div class="icon">
                         5
                       </div>
@@ -352,10 +337,9 @@
                   </a>
                 </div>
                 <div class="col-sm-4 col-xs-6">
-                  <a href="#projectType" data-toggle="tab">
-                    <div class="choice" data-toggle="wizard-radio" rel="tooltip"
-                      title="Select this option if you are coming with your team.">
-                      <input type="radio" name="job" value="Code">
+                  <a href="#projectType" data-toggle="tab" (click)="setQty('Plus de 5')">
+                    <div class="choice" data-toggle="wizard-radio" rel="tooltip" >
+                      <input type="radio" formControlName="qty" value="Plus de 5">
                       <div class="icon">
                         Plus de 5
                       </div>
@@ -367,22 +351,20 @@
             <div class="tab-pane" id="projectType">
               <h4 class="info-text">QUEL EST VOTRE TYPE DE PROJET ?</h4>
               <div class="row">
-                <div class="col-sm-6 col-xs-6">
-                  <a href="#finalized" data-toggle="tab">
-                    <div class="choice" data-toggle="wizard-radio" rel="tooltip"
-                      title="This is good if you travel alone.">
-                      <input type="radio" name="job" value="Design">
+                <div class="col-sm-6 col-xs-6 text-center">
+                  <a href="#finalized" data-toggle="tab" (click)="setProjectType('Rénovation')">
+							<div class="choice" data-toggle="wizard-radio" rel="tooltip">
+							<input type="radio" formControlName="projectType" value="Rénovation">
                       <div class="icon" style="height: 150px; width: 150px; font-size: 12px;">
                         RENOVATION
                       </div>
                     </div>
                   </a>
                 </div>
-                <div class="col-sm-6 col-xs-6">
-                  <a href="#finalized" data-toggle="tab">
-                    <div class="choice" data-toggle="wizard-radio" rel="tooltip"
-                      title="Select this room if you're traveling with your family.">
-                      <input type="radio" name="job" value="Code">
+                <div class="col-sm-6 col-xs-6 text-center">
+                  <a href="#finalized" data-toggle="tab" (click)="setProjectType('Construction neuve')">
+							<div class="choice" data-toggle="wizard-radio" rel="tooltip">
+							<input type="radio" formControlName="projectType" value="Construction neuve">
                       <div class="icon" style="height: 150px; width: 150px; font-size: 12px;">
                         CONSTRUCTION NEUVE
                       </div>
@@ -404,7 +386,7 @@
                     </span>
                     <div class="form-group label-floating">
                       <label class="control-label">Nom Prénom*</label>
-                      <input name="name" type="text" class="form-control">
+                      <input formControlName="name" type="text" class="form-control">
                     </div>
                   </div>
 
@@ -414,7 +396,7 @@
                     </span>
                     <div class="form-group label-floating">
                       <label class="control-label">Email *</label>
-                      <input name="name2" type="password" class="form-control">
+                      <input formControlName="email" type="email" class="form-control">
                     </div>
                   </div>
                   <div class="input-group">
@@ -423,7 +405,7 @@
                     </span>
                     <div class="form-group label-floating">
                       <label class="control-label">Téléphone *</label>
-                      <input name="name2" type="password" class="form-control">
+                      <input formControlName="phone" type="text" class="form-control">
                     </div>
                   </div>
                 </div>
@@ -434,7 +416,7 @@
                     </span>
                     <div class="form-group label-floating">
                       <label class="control-label">Adresse *</label>
-                      <input name="name2" type="text" class="form-control">
+                      <input formControlName="address" type="text" class="form-control">
                     </div>
                   </div>
                   <div class="input-group">
@@ -443,7 +425,7 @@
                     </span>
                     <div class="form-group label-floating">
                       <label class="control-label">Code Postal - Ville *</label>
-                      <input name="name2" type="number" class="form-control">
+                      <input formControlName="cpVille" type="text" class="form-control">
                     </div>
                   </div>
                   <div class="input-group">
@@ -452,14 +434,15 @@
                     </span>
                     <div class="form-group label-floating">
                       <label class="control-label">Description du projet</label>
-                      <textarea class="form-control" placeholder="" rows="6"></textarea>
+                      <textarea class="form-control" formControlName="description" placeholder="" rows="6"></textarea>
                     </div>
                   </div>
                 </div>
 
                 <div class="col-sm-12">
                   <div class="input-group" style="margin: 0 auto;">
-                    <button type="submit" class="btn btn-default" style="background: #3164B3;">Envoyer</button>
+                    <button type="submit" class="btn btn-default" style="background: #3164B3;"
+                      (click)="sendEmail()">Envoyer</button>
                   </div>
                 </div>
               </div>
