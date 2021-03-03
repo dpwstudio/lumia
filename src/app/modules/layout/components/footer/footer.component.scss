@@ -1,0 +1,22 @@
+.footer {
+  background: #1d1d1d;
+}
+
+.footer .footer-list-item {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.footer .footer-list-link {
+	color: #fff;
+}
+
+@media screen and (max-width: 500px) {
+  .copyright {
+    font-size: 12px;
+  }
+}
+
+input, textarea {
+  border-radius: 5px;
+}

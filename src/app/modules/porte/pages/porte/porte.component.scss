@@ -1,0 +1,46 @@
+.btn-theme {
+  border-radius: 5px;
+  background-color: #3164B3;
+  border: none;
+
+  &:hover {
+    background-color: #204c8d;
+    color: white;
+  }
+}
+
+.carousel-title {
+  font-size: 60px;
+}
+
+@media (max-width: 500px) {
+  .carousel-title {
+    font-size: 45px;
+  }
+}
+
+
+.promo-section-col {
+  h2 {
+    color: white;
+    font-size: 40px;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 500px) {
+    h2 {
+      font-size: 35px;
+    }
+  }
+
+  h6 {
+    color: white;
+    font-size: 20px;
+    width: 100%;
+  }
+
+  p {
+    color: white;
+    font-size: 20px;
+  }
+}

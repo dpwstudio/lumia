@@ -1,0 +1,63 @@
+<!--========== PARALLAX ==========-->
+<div class="parallax-window" style="background: url(assets/img/fenetre/entete.jpg); background-size: cover;">
+  <div class="parallax-content container">
+    <h1 class="carousel-title">Baies coulissantes</h1>
+    <h4 style="color: white;">NOS GAMMES ET OPTIONS POUR VOS BAIES COULISSANTES PVC, ALU, MIXTE ALU / BOIS, BOIS ET
+      RAU-FIPRO®
+    </h4>
+  </div>
+</div>
+<!--========== PARALLAX ==========-->
+
+<!--========== PAGE LAYOUT ==========-->
+<div class="content-lg container">
+  <div class="row margin-b-40">
+    <div class="col-sm-12">
+      <h2 class="first-title">Voici ce que nous proposons</h2>
+      <p>Toutes nos gammes de baies coulissantes PVC, ALU, Mixtes BOIS/ALU, BOIS et
+        Rau-fipro®, sont éligibles au crédit d’impôts selon loi de finance en vigueur. Leurs performances thermiques et
+        phoniques les placent parmi les plus isolantes du marché.</p>
+    </div>
+  </div>
+  <!--// end row -->
+
+  <div class="row margin-b-50">
+    <div class="col-sm-4 margin-b-30" *ngFor="let berrie of berries">
+      <div class="margin-b-20">
+        <div class="animated zoomIn">
+          <img class="img-responsive" src="{{berrie.img}}" alt="">
+        </div>
+      </div>
+      <h4 class="text-center"><a href="#">{{berrie.title}}</a></h4>
+      <p>{{berrie.text}}</p>
+    </div>
+  </div>
+  <!--// end row -->
+</div>
+<!-- End Our Exceptional Solutions -->
+
+<!-- Promo Section -->
+<div class="promo-section overflow-h"
+  style="background-image: url('assets/img/1920x1080/06.jpg'); background-size: cover; min-height: 500px;">
+  <div class="container">
+    <div class="clearfix">
+      <div class="ver-center">
+        <div class="ver-center-aligned">
+          <div class="promo-section-col">
+            <h2>Besoin d'inspiration ?</h2>
+            <h6>Vous avez un projet, une envie, une idée ?</h6>
+            <p>Lumia ouverture vous accompagne en vous offrant l’une des gammes les plus larges du marché. Design
+              classique ou contemporain, Fenêtres, portes, volets ou portails, PVC, RFP, ALU, Bois ou Mixte.
+              Laissez-vous guider et trouvez la menuiserie qui répond à toutes vos envies.</p>
+            <p style="margin-bottom: 40px;">Rien ne vous engage.</p>
+            <a href="#" class="btn-theme btn-theme-sm btn-white-brd text-uppercase">
+              Contactez-nous</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Promo Section -->
+
+<!--========== END PAGE LAYOUT ==========-->

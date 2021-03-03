@@ -1,0 +1,472 @@
+<!--   Big container   -->
+<div class="container" *ngIf="isVisible">
+  <div class="row row-container">
+    <!-- Wizard container -->
+    <div class="wizard-container animated bounceIn">
+      <i (click)="toggleDevis()" class="service-icon icon-close"></i>
+      <div class="card wizard-card" data-color="red" id="wizard">
+        <form action="" method="">
+          <!--        You can switch " data-color="blue" "  with one of the next bright colors: "green", "orange", "red", "purple"             -->
+          <div class="wizard-header">
+            <h3 class="wizard-title">
+              Devis en ligne
+            </h3>
+            <h5>Créer votre demande de devis gratuitement et sans engagement.</h5>
+          </div>
+          <div class="wizard-navigation">
+            <ul>
+              <li><a href="#category" data-toggle="tab" class="active">Type de produit</a></li>
+              <li><a href="#fenetres" data-toggle="tab">Produit</a></li>
+              <li><a href="#qty" data-toggle="tab">Quantité</a></li>
+              <li><a href="#projectType" data-toggle="tab">Type de projet</a></li>
+              <li><a href="#finalized" data-toggle="tab">Finaliser</a></li>
+            </ul>
+          </div>
+
+          <div class="tab-content">
+            <div class="tab-pane active" id="category">
+              <h4 class="info-text">QUEL TYPE DE PRODUIT RECHERCHEZ-VOUS ?</h4>
+              <div class="row">
+                <div class="col-sm-4 col-xs-6">
+                  <a href="#fenetres" data-toggle="tab">
+                    <div class="choice" data-toggle="wizard-radio" rel="tooltip">
+                      <input type="radio" name="category" value="Design">
+                      <div class="icon">
+                        <img src="assets/img/icone/icone-fenetre.png" alt="" width="60">
+                      </div>
+                      <h6>Fenêtres et porte-fenêtre</h6>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                  <a href="#baies" data-toggle="tab">
+                    <div class="choice" data-toggle="wizard-radio" rel="tooltip">
+                      <input type="radio" name="baie" value="Baie coulissante">
+                      <div class="icon">
+                        <img src="assets/img/icone/icone-baie.png" alt="" width="60">
+                      </div>
+                      <h6>Baies coulissantes</h6>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                  <a href="#volets" data-toggle="tab">
+                    <div class="choice" data-toggle="wizard-radio" rel="tooltip">
+                      <input type="radio" name="job" value="Code">
+                      <div class="icon">
+                        <img src="assets/img/icone/icone-volet.png" alt="" width="75">
+                      </div>
+                      <h6>Volets</h6>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                  <a href="#portes" data-toggle="tab">
+                    <div class="choice" data-toggle="wizard-radio" rel="tooltip">
+                      <input type="radio" name="job" value="Design">
+                      <div class="icon">
+                        <img src="assets/img/icone/icone-porte.png" alt="" width="60">
+                      </div>
+                      <h6>Porte d'entrée</h6>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                  <a href="#portails" data-toggle="tab">
+                    <div class="choice" data-toggle="wizard-radio" rel="tooltip">
+                      <input type="radio" name="job" value="Code">
+                      <div class="icon">
+                        <img src="assets/img/icone/icone-portail.png" alt="" width="75">
+                      </div>
+                      <h6>Portails et clôtures</h6>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- FENETRES -->
+            <div class="tab-pane" id="fenetres">
+              <h4 class="info-text">QUELLES FENÊTRES RECHERCHEZ-VOUS ? </h4>
+              <div class="row">
+                <div class="col-sm-4 col-xs-6">
+                  <a href="#qty" data-toggle="tab">
+                    <div class="choice" data-toggle="wizard-radio" rel="tooltip">
+                      <input type="radio" name="job" value="Design">
+                      <div class="icon">
+                        <img src="assets/img/icone/icone-fenetre.png" alt="" width="60">
+                      </div>
+                      <h6>Fenêtres PVC</h6>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                  <a href="#qty" data-toggle="tab">
+                    <div class="choice" data-toggle="wizard-radio" rel="tooltip">
+                      <input type="radio" name="job" value="Code">
+                      <div class="icon">
+                        <img src="assets/img/icone/icone-fenetre.png" alt="" width="60">
+                      </div>
+                      <h6>Fenêtres Bois</h6>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                  <a href="#qty" data-toggle="tab">
+                    <div class="choice" data-toggle="wizard-radio" rel="tooltip"
+                      title="Select this option if you are coming with your team.">
+                      <input type="radio" name="job" value="Code">
+                      <div class="icon">
+                        <img src="assets/img/icone/icone-fenetre.png" alt="" width="60">
+                      </div>
+                      <h6>Fenêtres aluminium</h6>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- BAIES -->
+            <div class="tab-pane" id="baies">
+              <h4 class="info-text">QUELLES BAIES COULISSANTES RECHERCHEZ-VOUS ? </h4>
+              <div class="row">
+                <div class="col-sm-4 col-xs-6">
+                  <a href="#qty" data-toggle="tab">
+                    <div class="choice" data-toggle="wizard-radio" rel="tooltip"
+                      title="This is good if you travel alone.">
+                      <input type="radio" name="job" value="Design">
+                      <div class="icon">
+                        <img src="assets/img/icone/icone-baie.png" alt="" width="60">
+                      </div>
+                      <h6>Baies PVC</h6>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                  <a href="#qty" data-toggle="tab">
+                    <div class="choice" data-toggle="wizard-radio" rel="tooltip"
+                      title="Select this room if you're traveling with your family.">
+                      <input type="radio" name="job" value="Code">
+                      <div class="icon">
+                        <img src="assets/img/icone/icone-baie.png" alt="" width="60">
+                      </div>
+                      <h6>Baies Bois</h6>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                  <a href="#qty" data-toggle="tab">
+                    <div class="choice" data-toggle="wizard-radio" rel="tooltip"
+                      title="Select this option if you are coming with your team.">
+                      <input type="radio" name="job" value="Code">
+                      <div class="icon">
+                        <img src="assets/img/icone/icone-baie.png" alt="" width="60">
+                      </div>
+                      <h6>Baies aluminium</h6>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- PORTES -->
+            <div class="tab-pane" id="volets">
+              <h4 class="info-text">QUELLES PORTES RECHERCHEZ-VOUS ? </h4>
+              <div class="row">
+                <div class="col-sm-4 col-xs-6">
+                  <a href="#qty" data-toggle="tab">
+                    <div class="choice" data-toggle="wizard-radio" rel="tooltip"
+                      title="This is good if you travel alone.">
+                      <input type="radio" name="job" value="Design">
+                      <div class="icon">
+                        <img src="assets/img/icone/icone-volet.png" alt="" width="60">
+                      </div>
+                      <h6>Volets PVC</h6>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                  <a href="#qty" data-toggle="tab">
+                    <div class="choice" data-toggle="wizard-radio" rel="tooltip"
+                      title="Select this room if you're traveling with your family.">
+                      <input type="radio" name="job" value="Code">
+                      <div class="icon">
+                        <img src="assets/img/icone/icone-volet.png" alt="" width="60">
+                      </div>
+                      <h6>Volets Bois</h6>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                  <a href="#qty" data-toggle="tab">
+                    <div class="choice" data-toggle="wizard-radio" rel="tooltip"
+                      title="Select this option if you are coming with your team.">
+                      <input type="radio" name="job" value="Code">
+                      <div class="icon">
+                        <img src="assets/img/icone/icone-volet.png" alt="" width="60">
+                      </div>
+                      <h6>Volets aluminium</h6>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="portes">
+              <h4 class="info-text">QUELLE PORTE RECHERCHEZ-VOUS ? </h4>
+              <div class="row">
+                <div class="col-sm-4 col-xs-6">
+                  <a href="#qty" data-toggle="tab">
+                    <div class="choice" data-toggle="wizard-radio" rel="tooltip"
+                      title="This is good if you travel alone.">
+                      <input type="radio" name="job" value="Design">
+                      <div class="icon">
+                        <img src="assets/img/icone/icone-porte.png" alt="" width="60">
+                      </div>
+                      <h6>Porte d'entrée PVC</h6>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                  <a href="#qty" data-toggle="tab">
+                    <div class="choice" data-toggle="wizard-radio" rel="tooltip"
+                      title="Select this room if you're traveling with your family.">
+                      <input type="radio" name="job" value="Code">
+                      <div class="icon">
+                        <img src="assets/img/icone/icone-porte.png" alt="" width="60">
+                      </div>
+                      <h6>Porte d'entrée Bois</h6>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                  <a href="#qty" data-toggle="tab">
+                    <div class="choice" data-toggle="wizard-radio" rel="tooltip"
+                      title="Select this option if you are coming with your team.">
+                      <input type="radio" name="job" value="Code">
+                      <div class="icon">
+                        <img src="assets/img/icone/icone-porte.png" alt="" width="60">
+                      </div>
+                      <h6>Porte d'entrée aluminium</h6>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="portails">
+              <h4 class="info-text">QUELLES PORTAILS RECHERCHEZ-VOUS ? </h4>
+              <div class="row">
+                <div class="col-sm-4 col-xs-6">
+                  <a href="#qty" data-toggle="tab">
+                    <div class="choice" data-toggle="wizard-radio" rel="tooltip"
+                      title="This is good if you travel alone.">
+                      <input type="radio" name="job" value="Design">
+                      <div class="icon">
+                        <img src="assets/img/icone/icone-portail.png" alt="" width="60">
+                      </div>
+                      <h6>Portails PVC</h6>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                  <a href="#qty" data-toggle="tab">
+                    <div class="choice" data-toggle="wizard-radio" rel="tooltip"
+                      title="Select this room if you're traveling with your family.">
+                      <input type="radio" name="job" value="Code">
+                      <div class="icon">
+                        <img src="assets/img/icone/icone-portail.png" alt="" width="60">
+                      </div>
+                      <h6>Portails Bois</h6>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                  <a href="#qty" data-toggle="tab">
+                    <div class="choice" data-toggle="wizard-radio" rel="tooltip"
+                      title="Select this option if you are coming with your team.">
+                      <input type="radio" name="job" value="Code">
+                      <div class="icon">
+                        <img src="assets/img/icone/icone-portail.png" alt="" width="60">
+                      </div>
+                      <h6>Portails aluminium</h6>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="qty">
+              <h4 class="info-text">COMBIEN SOUHAITEZ-VOUS EN CHANGER ?</h4>
+              <div class="row">
+                <div class="col-sm-4 col-xs-6">
+                  <a href="#projectType" data-toggle="tab">
+                    <div class="choice" data-toggle="wizard-radio" rel="tooltip"
+                      title="This is good if you travel alone.">
+                      <input type="radio" name="job" value="Design">
+                      <div class="icon">
+                        1
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                  <a href="#projectType" data-toggle="tab">
+                    <div class="choice" data-toggle="wizard-radio" rel="tooltip"
+                      title="Select this room if you're traveling with your family.">
+                      <input type="radio" name="job" value="Code">
+                      <div class="icon">
+                        2
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                  <a href="#projectType" data-toggle="tab">
+                    <div class="choice" data-toggle="wizard-radio" rel="tooltip"
+                      title="Select this option if you are coming with your team.">
+                      <input type="radio" name="job" value="Code">
+                      <div class="icon">
+                        3
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                  <a href="#projectType" data-toggle="tab">
+                    <div class="choice" data-toggle="wizard-radio" rel="tooltip"
+                      title="This is good if you travel alone.">
+                      <input type="radio" name="job" value="Design">
+                      <div class="icon">
+                        4
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                  <a href="#projectType" data-toggle="tab">
+                    <div class="choice" data-toggle="wizard-radio" rel="tooltip"
+                      title="Select this room if you're traveling with your family.">
+                      <input type="radio" name="job" value="Code">
+                      <div class="icon">
+                        5
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                  <a href="#projectType" data-toggle="tab">
+                    <div class="choice" data-toggle="wizard-radio" rel="tooltip"
+                      title="Select this option if you are coming with your team.">
+                      <input type="radio" name="job" value="Code">
+                      <div class="icon">
+                        Plus de 5
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="projectType">
+              <h4 class="info-text">QUEL EST VOTRE TYPE DE PROJET ?</h4>
+              <div class="row">
+                <div class="col-sm-6 col-xs-6">
+                  <a href="#finalized" data-toggle="tab">
+                    <div class="choice" data-toggle="wizard-radio" rel="tooltip"
+                      title="This is good if you travel alone.">
+                      <input type="radio" name="job" value="Design">
+                      <div class="icon" style="height: 150px; width: 150px; font-size: 12px;">
+                        RENOVATION
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-sm-6 col-xs-6">
+                  <a href="#finalized" data-toggle="tab">
+                    <div class="choice" data-toggle="wizard-radio" rel="tooltip"
+                      title="Select this room if you're traveling with your family.">
+                      <input type="radio" name="job" value="Code">
+                      <div class="icon" style="height: 150px; width: 150px; font-size: 12px;">
+                        CONSTRUCTION NEUVE
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-pane" id="finalized">
+              <div class="row">
+                <div class="col-sm-12">
+                  <h4 class="info-text">FINALISER VOTRE DEMANDE</h4>
+                </div>
+                <div class="col-sm-6 col-xs-12">
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                      <i class="service-icon icon-user" style="font-size: 20px; line-height: 30px;"></i>
+                    </span>
+                    <div class="form-group label-floating">
+                      <label class="control-label">Nom Prénom*</label>
+                      <input name="name" type="text" class="form-control">
+                    </div>
+                  </div>
+
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                      <i class="service-icon icon-envelope" style="font-size: 20px; line-height: 30px;"></i>
+                    </span>
+                    <div class="form-group label-floating">
+                      <label class="control-label">Email *</label>
+                      <input name="name2" type="password" class="form-control">
+                    </div>
+                  </div>
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                      <i class="service-icon icon-screen-smartphone" style="font-size: 20px; line-height: 30px;"></i>
+                    </span>
+                    <div class="form-group label-floating">
+                      <label class="control-label">Téléphone *</label>
+                      <input name="name2" type="password" class="form-control">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6  col-xs-12">
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                      <i class="service-icon icon-map" style="font-size: 20px; line-height: 30px;"></i>
+                    </span>
+                    <div class="form-group label-floating">
+                      <label class="control-label">Adresse *</label>
+                      <input name="name2" type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                      <i class="service-icon icon-map" style="font-size: 20px; line-height: 30px;"></i>
+                    </span>
+                    <div class="form-group label-floating">
+                      <label class="control-label">Code Postal - Ville *</label>
+                      <input name="name2" type="number" class="form-control">
+                    </div>
+                  </div>
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                      <i class="service-icon icon-speech" style="font-size: 20px; line-height: 30px;"></i>
+                    </span>
+                    <div class="form-group label-floating">
+                      <label class="control-label">Description du projet</label>
+                      <textarea class="form-control" placeholder="" rows="6"></textarea>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-12">
+                  <div class="input-group" style="margin: 0 auto;">
+                    <button type="submit" class="btn btn-default" style="background: #3164B3;">Envoyer</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div> <!-- wizard container -->
+  </div> <!-- row -->
+</div> <!--  big container -->

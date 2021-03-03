@@ -1,0 +1,6 @@
+<app-header></app-header>
+<router-outlet></router-outlet>
+<app-footer></app-footer>
+
+<button (click)="showDevis = true" class="btn btn-info">DEVIS <br> EN LIGNE</button>
+<app-devis [isVisible]="showDevis" (toggle)="showDevis = $event"></app-devis>

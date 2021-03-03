@@ -1,0 +1,24 @@
+.img-responsive {
+  border-radius: 10px;
+}
+
+.first-title {
+  text-transform: uppercase;
+
+  &:after {
+    position: absolute;
+    top: 18px;
+    left: -16px;
+    width: 21px;
+    height: 5px;
+    background: #3164B3;
+    content: " ";
+    transition-duration: 0.4s;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
+  }
+}
+
+.carousel-indicators li {
+  margin: 1px 7px;
+}
