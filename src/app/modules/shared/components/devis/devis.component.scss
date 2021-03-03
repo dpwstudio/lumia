@@ -37,11 +37,11 @@
       padding: 0;
 
       li {
-
         list-style-type: none;
         width: 100%;
         text-align: center;
         cursor: pointer;
+        margin: 0 5px;
 
         a {
           display: flex;
@@ -50,14 +50,16 @@
           font-size: 10px;
           text-transform: uppercase;
           justify-content: center;
-          padding: 12px;
+          padding: 15px 0;
+          border-radius: 30px;
           background-color: #efefef;
         }
 
         a.active {
           width: 100%;
           text-align: center;
-          padding: 12px;
+          padding: 12px 0;
+          border-radius: 30px;
           font-size: 10px;
           text-transform: uppercase;
           -webkit-font-smoothing: subpixel-antialiased;
@@ -172,8 +174,15 @@ h2.title {
 }
 
 .wizard-card {
-  min-height: 410px;
+  padding: 15px;
+  min-height: 670px;
   box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 500px) {
+  .wizard-card {
+    padding: 0;
+  }
 }
 
 .wizard-card .picture-container {
@@ -199,221 +208,6 @@ h2.title {
   border-color: #2ca8ff;
 }
 
-.wizard-card[data-color="purple"] .moving-tab {
-  position: absolute;
-  text-align: center;
-  padding: 12px;
-  font-size: 12px;
-  text-transform: uppercase;
-  -webkit-font-smoothing: subpixel-antialiased;
-  background-color: #9c27b0;
-  top: -4px;
-  left: 0px;
-  border-radius: 4px;
-  color: #FFFFFF;
-  cursor: pointer;
-  font-weight: 500;
-  box-shadow: 0 16px 26px -10px rgba(156, 39, 176, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(156, 39, 176, 0.2);
-}
-
-.wizard-card[data-color="purple"] .picture:hover {
-  border-color: #9c27b0;
-}
-
-.wizard-card[data-color="purple"] .choice:hover .icon,
-.wizard-card[data-color="purple"] .choice.active .icon {
-  border-color: #9c27b0;
-  color: #9c27b0;
-}
-
-.wizard-card[data-color="purple"] .form-group .form-control {
-  background-image: linear-gradient(#9c27b0, #9c27b0), linear-gradient(#D2D2D2, #D2D2D2);
-}
-
-.wizard-card[data-color="purple"] .checkbox input[type=checkbox]:checked+.checkbox-material .check {
-  background-color: #9c27b0;
-}
-
-.wizard-card[data-color="purple"] .radio input[type=radio]:checked~.check {
-  background-color: #9c27b0;
-}
-
-.wizard-card[data-color="purple"] .radio input[type=radio]:checked~.circle {
-  border-color: #9c27b0;
-}
-
-.wizard-card[data-color="green"] .moving-tab {
-  position: absolute;
-  text-align: center;
-  padding: 12px;
-  font-size: 12px;
-  text-transform: uppercase;
-  -webkit-font-smoothing: subpixel-antialiased;
-  background-color: #4caf50;
-  top: -4px;
-  left: 0px;
-  border-radius: 4px;
-  color: #FFFFFF;
-  cursor: pointer;
-  font-weight: 500;
-  box-shadow: 0 16px 26px -10px rgba(76, 175, 80, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(76, 175, 80, 0.2);
-}
-
-.wizard-card[data-color="green"] .picture:hover {
-  border-color: #4caf50;
-}
-
-.wizard-card[data-color="green"] .choice:hover .icon,
-.wizard-card[data-color="green"] .choice.active .icon {
-  border-color: #4caf50;
-  color: #4caf50;
-}
-
-.wizard-card[data-color="green"] .form-group .form-control {
-  background-image: linear-gradient(#4caf50, #4caf50), linear-gradient(#D2D2D2, #D2D2D2);
-}
-
-.wizard-card[data-color="green"] .checkbox input[type=checkbox]:checked+.checkbox-material .check {
-  background-color: #4caf50;
-}
-
-.wizard-card[data-color="green"] .radio input[type=radio]:checked~.check {
-  background-color: #4caf50;
-}
-
-.wizard-card[data-color="green"] .radio input[type=radio]:checked~.circle {
-  border-color: #4caf50;
-}
-
-.wizard-card[data-color="blue"] .moving-tab {
-  position: absolute;
-  text-align: center;
-  padding: 12px;
-  font-size: 12px;
-  text-transform: uppercase;
-  -webkit-font-smoothing: subpixel-antialiased;
-  background-color: #00bcd4;
-  top: -4px;
-  left: 0px;
-  border-radius: 4px;
-  color: #FFFFFF;
-  cursor: pointer;
-  font-weight: 500;
-  box-shadow: 0 16px 26px -10px rgba(0, 188, 212, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 188, 212, 0.2);
-}
-
-.wizard-card[data-color="blue"] .picture:hover {
-  border-color: #00bcd4;
-}
-
-.wizard-card[data-color="blue"] .choice:hover .icon,
-.wizard-card[data-color="blue"] .choice.active .icon {
-  border-color: #00bcd4;
-  color: #00bcd4;
-}
-
-.wizard-card[data-color="blue"] .form-group .form-control {
-  background-image: linear-gradient(#00bcd4, #00bcd4), linear-gradient(#D2D2D2, #D2D2D2);
-}
-
-.wizard-card[data-color="blue"] .checkbox input[type=checkbox]:checked+.checkbox-material .check {
-  background-color: #00bcd4;
-}
-
-.wizard-card[data-color="blue"] .radio input[type=radio]:checked~.check {
-  background-color: #00bcd4;
-}
-
-.wizard-card[data-color="blue"] .radio input[type=radio]:checked~.circle {
-  border-color: #00bcd4;
-}
-
-.wizard-card[data-color="orange"] .moving-tab {
-  position: absolute;
-  text-align: center;
-  padding: 12px;
-  font-size: 12px;
-  text-transform: uppercase;
-  -webkit-font-smoothing: subpixel-antialiased;
-  background-color: #ff9800;
-  top: -4px;
-  left: 0px;
-  border-radius: 4px;
-  color: #FFFFFF;
-  cursor: pointer;
-  font-weight: 500;
-  box-shadow: 0 16px 26px -10px rgba(255, 152, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(255, 152, 0, 0.2);
-}
-
-.wizard-card[data-color="orange"] .picture:hover {
-  border-color: #ff9800;
-}
-
-.wizard-card[data-color="orange"] .choice:hover .icon,
-.wizard-card[data-color="orange"] .choice.active .icon {
-  border-color: #ff9800;
-  color: #ff9800;
-}
-
-.wizard-card[data-color="orange"] .form-group .form-control {
-  background-image: linear-gradient(#ff9800, #ff9800), linear-gradient(#D2D2D2, #D2D2D2);
-}
-
-.wizard-card[data-color="orange"] .checkbox input[type=checkbox]:checked+.checkbox-material .check {
-  background-color: #ff9800;
-}
-
-.wizard-card[data-color="orange"] .radio input[type=radio]:checked~.check {
-  background-color: #ff9800;
-}
-
-.wizard-card[data-color="orange"] .radio input[type=radio]:checked~.circle {
-  border-color: #ff9800;
-}
-
-.wizard-card[data-color="red"] .moving-tab {
-  position: absolute;
-  text-align: center;
-  padding: 12px;
-  font-size: 12px;
-  text-transform: uppercase;
-  -webkit-font-smoothing: subpixel-antialiased;
-  background-color: #f44336;
-  top: -4px;
-  left: 0px;
-  border-radius: 4px;
-  color: #FFFFFF;
-  cursor: pointer;
-  font-weight: 500;
-  box-shadow: 0 16px 26px -10px rgba(244, 67, 54, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(244, 67, 54, 0.2);
-}
-
-.wizard-card[data-color="red"] .picture:hover {
-  border-color: #f44336;
-}
-
-// .wizard-card[data-color="red"] .choice:hover .icon,
-// .wizard-card[data-color="red"] .choice.active .icon {
-//   border-color: #f44336;
-//   color: #f44336;
-// }
-
-.wizard-card[data-color="red"] .form-group .form-control {
-  background-image: linear-gradient(#f44336, #f44336), linear-gradient(#D2D2D2, #D2D2D2);
-}
-
-.wizard-card[data-color="red"] .checkbox input[type=checkbox]:checked+.checkbox-material .check {
-  background-color: #f44336;
-}
-
-.wizard-card[data-color="red"] .radio input[type=radio]:checked~.check {
-  background-color: #f44336;
-}
-
-.wizard-card[data-color="red"] .radio input[type=radio]:checked~.circle {
-  border-color: #f44336;
-}
-
 .wizard-card .picture input[type="file"] {
   cursor: pointer;
   display: block;
@@ -431,7 +225,7 @@ h2.title {
 
 .wizard-card .tab-content {
   min-height: 340px;
-  padding: 20px 15px;
+  padding: 30px 15px 0;
 }
 
 .wizard-card .wizard-footer {
@@ -448,7 +242,7 @@ h2.title {
 
 .wizard-card .wizard-header {
   text-align: center;
-  padding: 25px 0 35px;
+  padding: 20px 0;
 }
 
 .wizard-card .wizard-header h5 {
@@ -469,7 +263,7 @@ h2.title {
 .wizard-card .info-text {
   text-align: center;
   font-weight: 300;
-  margin: 10px 0 30px;
+  margin: 10px 0;
 }
 
 .wizard-card .choice {

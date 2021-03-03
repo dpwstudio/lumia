@@ -4,7 +4,7 @@
     <!-- Wizard container -->
     <div class="wizard-container animated bounceIn">
       <i (click)="toggleDevis()" class="service-icon icon-close"></i>
-      <div class="card wizard-card" data-color="red" id="wizard">
+      <div class="card wizard-card" id="wizard">
         <form [formGroup]="devisForm">
           <!--        You can switch " data-color="blue" "  with one of the next bright colors: "green", "orange", "red", "purple"             -->
           <div class="wizard-header">
@@ -15,11 +15,34 @@
           </div>
           <div class="wizard-navigation">
             <ul>
-              <li><a href="#category" data-toggle="tab" class="active">Type de produit</a></li>
-              <li><a href="#fenetres" data-toggle="tab">Produit</a></li>
-              <li><a href="#qty" data-toggle="tab">Quantité</a></li>
-              <li><a href="#projectType" data-toggle="tab">Type de projet</a></li>
-              <li><a href="#finalized" data-toggle="tab">Finaliser</a></li>
+              <li>
+                <a href="#category" data-toggle="tab" [class.active.animated.fadeIn]="showCategory">
+                  Type de produit
+                  <i class="service-icon icon-check margin-l-10" *ngIf="showCategory"
+                    style="font-size: 20px; border-radius: 0 0 10px 10px;"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#fenetres" data-toggle="tab" [class.active]="showProductModel">
+                  Produit
+                  <i class="service-icon icon-check margin-l-10" *ngIf="showProductModel"
+                    style="font-size: 20px; border-radius: 0 0 10px 10px;"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#qty" data-toggle="tab" [class.active]="showQty">
+                  Quantité
+                  <i class="service-icon icon-check margin-l-10" *ngIf="showQty"
+                    style="font-size: 20px; border-radius: 0 0 10px 10px;"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#projectType" data-toggle="tab" [class.active]="showProjectType">
+                  Type de projet
+                  <i class="service-icon icon-check margin-l-10" *ngIf="showProjectType"
+                    style="font-size: 20px; border-radius: 0 0 10px 10px;"></i>
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -86,7 +109,7 @@
             </div>
 
             <!-- FENETRES -->
-            <div class="tab-pane" id="fenetres">
+            <div class="tab-pane animated bounceIn" id="fenetres">
               <h4 class="info-text">QUELLES FENÊTRES RECHERCHEZ-VOUS ? </h4>
               <div class="row">
                 <div class="col-sm-4 col-xs-6">
@@ -126,7 +149,7 @@
             </div>
 
             <!-- BAIES -->
-            <div class="tab-pane" id="baies">
+            <div class="tab-pane animated bounceIn" id="baies">
               <h4 class="info-text">QUELLES BAIES COULISSANTES RECHERCHEZ-VOUS ? </h4>
               <div class="row">
                 <div class="col-sm-4 col-xs-6">
@@ -166,7 +189,7 @@
             </div>
 
             <!-- PORTES -->
-            <div class="tab-pane" id="volets">
+            <div class="tab-pane animated bounceIn" id="volets">
               <h4 class="info-text">QUELLES PORTES RECHERCHEZ-VOUS ? </h4>
               <div class="row">
                 <div class="col-sm-4 col-xs-6">
@@ -205,7 +228,7 @@
                 </div>
               </div>
             </div>
-            <div class="tab-pane" id="portes">
+            <div class="tab-pane animated bounceIn" id="portes">
               <h4 class="info-text">QUELLE PORTE RECHERCHEZ-VOUS ? </h4>
               <div class="row">
                 <div class="col-sm-4 col-xs-6">
@@ -243,7 +266,7 @@
                 </div>
               </div>
             </div>
-            <div class="tab-pane" id="portails">
+            <div class="tab-pane animated bounceIn" id="portails">
               <h4 class="info-text">QUELLES PORTAILS RECHERCHEZ-VOUS ? </h4>
               <div class="row">
                 <div class="col-sm-4 col-xs-6">
@@ -259,8 +282,7 @@
                 </div>
                 <div class="col-sm-4 col-xs-6">
                   <a href="#qty" data-toggle="tab" (click)="setProductModel('Portails Bois')">
-                    <div class="choice" data-toggle="wizard-radio" rel="tooltip"
-                      >
+                    <div class="choice" data-toggle="wizard-radio" rel="tooltip">
                       <input type="radio" formControlName="productModel" value="Portails Bois">
                       <div class="icon">
                         <img src="assets/img/icone/icone-portail.png" alt="" width="60">
@@ -282,7 +304,7 @@
                 </div>
               </div>
             </div>
-            <div class="tab-pane" id="qty">
+            <div class="tab-pane animated bounceIn" id="qty">
               <h4 class="info-text">COMBIEN SOUHAITEZ-VOUS EN CHANGER ?</h4>
               <div class="row">
                 <div class="col-sm-4 col-xs-6">
@@ -327,8 +349,7 @@
                 </div>
                 <div class="col-sm-4 col-xs-6">
                   <a href="#projectType" data-toggle="tab" (click)="setQty('5')">
-                    <div class="choice" data-toggle="wizard-radio" rel="tooltip"
-                      >
+                    <div class="choice" data-toggle="wizard-radio" rel="tooltip">
                       <input type="radio" formControlName="qty" value="5">
                       <div class="icon">
                         5
@@ -338,7 +359,7 @@
                 </div>
                 <div class="col-sm-4 col-xs-6">
                   <a href="#projectType" data-toggle="tab" (click)="setQty('Plus de 5')">
-                    <div class="choice" data-toggle="wizard-radio" rel="tooltip" >
+                    <div class="choice" data-toggle="wizard-radio" rel="tooltip">
                       <input type="radio" formControlName="qty" value="Plus de 5">
                       <div class="icon">
                         Plus de 5
@@ -348,14 +369,14 @@
                 </div>
               </div>
             </div>
-            <div class="tab-pane" id="projectType">
+            <div class="tab-pane animated bounceIn" id="projectType">
               <h4 class="info-text">QUEL EST VOTRE TYPE DE PROJET ?</h4>
               <div class="row">
                 <div class="col-sm-6 col-xs-6 text-center">
                   <a href="#finalized" data-toggle="tab" (click)="setProjectType('Rénovation')">
-							<div class="choice" data-toggle="wizard-radio" rel="tooltip">
-							<input type="radio" formControlName="projectType" value="Rénovation">
-                      <div class="icon" style="height: 150px; width: 150px; font-size: 12px;">
+                    <div class="choice" data-toggle="wizard-radio" rel="tooltip">
+                      <input type="radio" formControlName="projectType" value="Rénovation">
+                      <div class="icon" style="height: 130px; width: 130px; font-size: 12px;">
                         RENOVATION
                       </div>
                     </div>
@@ -363,9 +384,9 @@
                 </div>
                 <div class="col-sm-6 col-xs-6 text-center">
                   <a href="#finalized" data-toggle="tab" (click)="setProjectType('Construction neuve')">
-							<div class="choice" data-toggle="wizard-radio" rel="tooltip">
-							<input type="radio" formControlName="projectType" value="Construction neuve">
-                      <div class="icon" style="height: 150px; width: 150px; font-size: 12px;">
+                    <div class="choice" data-toggle="wizard-radio" rel="tooltip">
+                      <input type="radio" formControlName="projectType" value="Construction neuve">
+                      <div class="icon" style="height: 130px; width: 130px; font-size: 12px;">
                         CONSTRUCTION NEUVE
                       </div>
                     </div>
@@ -374,7 +395,7 @@
               </div>
             </div>
 
-            <div class="tab-pane" id="finalized">
+            <div class="tab-pane animated bounceIn" id="finalized">
               <div class="row">
                 <div class="col-sm-12">
                   <h4 class="info-text">FINALISER VOTRE DEMANDE</h4>
@@ -440,9 +461,10 @@
                 </div>
 
                 <div class="col-sm-12">
-                  <div class="input-group" style="margin: 0 auto;">
-                    <button type="submit" class="btn btn-default" style="background: #3164B3;"
-                      (click)="sendEmail()">Envoyer</button>
+                  <div class="input-group" style="margin: 30px auto 0;">
+                    <button type="submit" class="btn btn-default"
+                      style="background: #3164B3; color: white; border: none; font-size: 11px; padding: 10px 20px;"
+                      (click)="sendEmail()"><i class="fas fa-paper-plane margin-r-5"></i> Envoyer</button>
                   </div>
                 </div>
               </div>
@@ -453,3 +475,11 @@
     </div> <!-- wizard container -->
   </div> <!-- row -->
 </div> <!--  big container -->
+
+<div class="alert alert-success" role="alert" style="position: absolute; top: 10px; right: 10px; z-index: 999999;" *ngIf="showSuccess">
+	<strong>Envoyé !</strong> Votre demande a été envoyé avec succès.
+</div>
+
+<div class="alert alert-error" role="alert" style="position: absolute; top: 10px; right: 10px; z-index: 999999;" *ngIf="showError">
+	<strong>Erreur !</strong> Veuillez compléter les champs manquants.
+</div>
