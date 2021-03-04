@@ -44,7 +44,7 @@
 </div>
 <!--========== SLIDER ==========-->
 
-<div class="video" *ngIf="showVideo">
+<div class="video" *ngIf="!showVideo">
   <div class="content-video">
     <i class="service-icon icon-close" (click)="showVideo = false"></i>
     <video controls autoplay width="100%">

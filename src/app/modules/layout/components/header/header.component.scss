@@ -12,27 +12,100 @@
   font-weight: bold;
 }
 
+.mobile {
+  display: none;
+  background-color: #fff;
+  box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
+
+  .header-mob {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+
+    .btn {
+      border: none;
+      padding: 0 20px;
+      border-radius: 30px;
+      font-size: 12px;
+      font-weight: bold;
+      text-transform: uppercase;
+      background-color: #3164B3;
+    }
+  }
+
+  div.scrollmenu {
+    overflow: auto;
+    white-space: nowrap;
+
+    .first-item {
+      background-color: #3164B3;
+      color: white;
+      border-bottom: 3px solid #3164B3;
+
+      .service-icon {
+        position: relative;
+        top: 2px;
+      }
+    }
+
+    a {
+      display: inline-block;
+      color: #515769;
+      text-align: center;
+      padding: 11px 15px 7px;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: bold;
+      border-bottom: 3px solid #fff;
+      text-transform: uppercase;
+    }
+
+    a:hover {
+      border-bottom: 3px solid #3164B3;
+      color: #3164B3;
+    }
+
+    a.active {
+      color: #3164B3;
+      border-bottom: 3px solid #3164B3;
+    }
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .header .nav-item-child {
     font-size: 12px;
   }
 }
 
+
+@media (max-width: 991px) {
+  .header {
+    background: transparent;
+    box-shadow: none;
+
+    ul {
+      background-color: #fffffff2;
+      border-radius: 5px;
+      padding: 10px 0;
+    }
+  }
+}
+
+
 @media screen and (max-width: 768px) {
   .header .nav-item-child {
     font-size: 15px;
   }
+
 }
 
-@media (max-width: 991px) {
-  .header {
-      background: transparent;
-      box-shadow: none;
+@media screen and (max-width: 500px) {
+  .mobile {
+    display: block;
+  }
 
-      ul {
-        background-color: #fffffff2;
-        border-radius: 5px;
-        padding: 10px 0;
-      }
+  .desktop {
+    display: none;
   }
 }

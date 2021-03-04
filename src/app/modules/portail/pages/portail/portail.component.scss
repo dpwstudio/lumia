@@ -14,8 +14,13 @@
 }
 
 @media (max-width: 500px) {
-  .carousel-title {
-    font-size: 45px;
+  .parallax-content {
+    .carousel-title {
+      font-size: 40px;
+    }
+    h4 {
+      font-size: 16px;
+    }
   }
 }
 
