@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { EmailService } from 'src/app/services/email/email.service';
 
 @Component({
@@ -11,12 +12,14 @@ export class FooterComponent implements OnInit {
   contactForm = this.formBuilder.group({
     name: ['', Validators.required],
     email: ['', Validators.required],
-    phone: ['', Validators.required],
+    subject: ['', Validators.required],
     message: ['', Validators.required]
   });
   loading = false;
+  showSuccess = false;
+  showError = false;
 
-  constructor(private formBuilder: FormBuilder, private emailService: EmailService) {}
+  constructor(private formBuilder: FormBuilder, private router: Router, private emailService: EmailService) { }
 
   ngOnInit(): void {
 
@@ -24,8 +27,18 @@ export class FooterComponent implements OnInit {
 
   sendEmail(): void {
     console.log('Your form data : ', this.contactForm.value);
-    // this.emailService.sendEmail(JSON.stringify(this.contactForm.value));
-    this.contactForm.reset();
+    if (!this.contactForm.valid) {
+      this.showError = true;
+    } else {
+      this.loading = true;
+      this.emailService.sendEmailFromContact(JSON.stringify(this.contactForm.value)).subscribe(res => {
+        console.log('res', res);
+        this.loading = false;
+        this.showSuccess = true;
+        this.contactForm.reset();
+        this.router.navigate(['/']);
+      });
+    }
   }
 
 

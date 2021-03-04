@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://dpwstudio.com/email.php'
+  mailContact: 'https://dpwstudio.com/lumia/contactMail.php',
+  mailDevis: 'https://dpwstudio.com/lumia/devisMail.php'
 };
 
 /*

@@ -11,8 +11,13 @@ export class EmailService {
 
   constructor(private http: HttpClient) { }
 
-  sendEmail(data: any): Observable<any> {
+  sendEmailFromContact(data: any): Observable<any> {
     console.log('data', data);
-    return this.http.post(environment.apiUrl, data);
+    return this.http.post(environment.mailContact, data);
+  }
+
+  sendEmailFromDevis(data: any): Observable<any> {
+    console.log('data', data);
+    return this.http.post(environment.mailDevis, data);
   }
 }

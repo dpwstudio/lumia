@@ -23,7 +23,7 @@
                 </a>
               </li>
               <li>
-                <a href="#fenetres" data-toggle="tab" [class.active]="showProductModel">
+                <a href="#category" data-toggle="tab" [class.active]="showProductModel">
                   Produit
                   <i class="service-icon icon-check margin-l-10" *ngIf="showProductModel"
                     style="font-size: 20px; border-radius: 0 0 10px 10px;"></i>
@@ -45,7 +45,21 @@
               </li>
             </ul>
           </div>
-
+          <div class="step-mobile">
+            <span [class.active-step]="showCategory">
+              <i class="fas fa-check" *ngIf="showCategory"></i>
+            </span>
+            <span [class.active-step]="showProductModel">
+              <i class="fas fa-check" *ngIf="showProductModel"></i>
+            </span>
+            <span [class.active-step]="showQty">
+              <i class="fas fa-check" *ngIf="showQty"></i>
+            </span>
+            <span [class.active-step]="showProjectType">
+              <i class="fas fa-check" *ngIf="showProjectType"></i>
+            </span>
+          </div>
+          
           <div class="tab-content">
             <div class="tab-pane active" id="category">
               <h4 class="info-text">QUEL TYPE DE PRODUIT RECHERCHEZ-VOUS ?</h4>
@@ -476,10 +490,21 @@
   </div> <!-- row -->
 </div> <!--  big container -->
 
-<div class="alert alert-success" role="alert" style="position: absolute; top: 10px; right: 10px; z-index: 999999;" *ngIf="showSuccess">
-	<strong>Envoyé !</strong> Votre demande a été envoyé avec succès.
+<div class="content-alert">
+  <div class="alert alert-success animated bounceIn" role="alert" *ngIf="showSuccess">
+    <strong class="margin-r-10">Envoyé !</strong> Votre demande a été envoyé avec succès.
+    <i class="fas fa-times margin-l-10" (click)="showSuccess = false"></i>
+  </div>
+  
+  <div class="alert alert-danger animated tada" role="alert" *ngIf="showError">
+    <strong class="margin-r-10">Erreur !</strong> Veuillez compléter les champs manquants.
+    <i class="fas fa-times margin-l-10" (click)="showError = false"></i>
+  </div>
 </div>
 
-<div class="alert alert-error" role="alert" style="position: absolute; top: 10px; right: 10px; z-index: 999999;" *ngIf="showError">
-	<strong>Erreur !</strong> Veuillez compléter les champs manquants.
+<div class="loading" *ngIf="loading">
+  <div class="animated pulse infinite text-center">
+    <img src="assets/img/logo2.png" alt="" width="140">
+    <p class="text-white mt-2">Veuillez patienter...</p>
+  </div>
 </div>

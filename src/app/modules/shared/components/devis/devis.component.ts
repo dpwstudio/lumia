@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output, SimpleChanges } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { EmailService } from 'src/app/services/email/email.service';
 
 @Component({
@@ -10,6 +11,7 @@ import { EmailService } from 'src/app/services/email/email.service';
 export class DevisComponent implements OnInit {
   @Input() isVisible = false;
   @Output() toggle = new EventEmitter<boolean>();
+  loading = false;
   showCategory = false;
   showProductModel = false;
   showQty = false;
@@ -29,7 +31,7 @@ export class DevisComponent implements OnInit {
     description: ['', Validators.required]
   });
 
-  constructor(private formBuilder: FormBuilder, private emailService: EmailService) { }
+  constructor(private formBuilder: FormBuilder, private router: Router, private emailService: EmailService) { }
 
   ngOnInit(): void {
   }
@@ -41,14 +43,21 @@ export class DevisComponent implements OnInit {
 
   sendEmail(): void {
     console.log('Your form data : ', this.devisForm.value);
-    console.log('this.devisForm.valid : ', this.devisForm.valid);
 
     if (!this.devisForm.valid) {
       this.showError = true;
+    } else {
+      this.loading = true;
+      this.emailService.sendEmailFromDevis(JSON.stringify(this.devisForm.value)).subscribe(res => {
+        console.log('res', res);
+        this.loading = false;
+        this.showSuccess = true;
+        this.devisForm.reset();
+        this.isVisible = false;
+        this.toggle.emit(this.isVisible);
+        this.router.navigate(['/']);
+      });
     }
-    // this.emailService.sendEmailDevis(JSON.stringify(this.devisForm.value));
-    this.devisForm.reset();
-    this.showSuccess = true;
   }
 
 

@@ -41,7 +41,7 @@
            <form [formGroup]="contactForm">
              <input type="text" class="form-control footer-input margin-b-20" formControlName="name" placeholder="Nom" required>
              <input type="email" class="form-control footer-input margin-b-20" formControlName="email" placeholder="Email" required>
-             <input type="text" class="form-control footer-input margin-b-20" formControlName="phone" placeholder="Téléphone" required>
+             <input type="text" class="form-control footer-input margin-b-20" formControlName="subject" placeholder="Objet" required>
              <textarea class="form-control footer-input margin-b-30" rows="6" formControlName="message" placeholder="Message" required></textarea>
              <button type="submit" class="btn-theme btn-theme-sm btn-base-bg text-uppercase"[disabled]="!contactForm.valid"
              (click)="sendEmail()" style="border-radius: 5px;">Envoyer</button>
@@ -82,3 +82,22 @@
    <!-- End Copyright -->
  </footer>
  <!--========== END FOOTER ==========-->
+
+ <div class="content-alert">
+  <div class="alert alert-success animated bounceIn" role="alert" *ngIf="showSuccess">
+    <strong class="margin-r-10">Envoyé !</strong> Votre message a été envoyé avec succès.
+    <i class="fas fa-times margin-l-10" (click)="showSuccess = false"></i>
+  </div>
+  
+  <div class="alert alert-danger animated tada" role="alert" *ngIf="showError">
+    <strong class="margin-r-10">Erreur !</strong> Veuillez compléter les champs manquants.
+    <i class="fas fa-times margin-l-10" (click)="showError = false"></i>
+  </div>
+</div>
+
+<div class="loading" *ngIf="loading">
+  <div class="animated pulse infinite text-center">
+    <img src="assets/img/logo2.png" alt="" width="140">
+    <p class="text-white mt-2">Veuillez patienter...</p>
+  </div>
+</div>
