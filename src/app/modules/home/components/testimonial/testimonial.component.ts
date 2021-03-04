@@ -34,7 +34,7 @@ export class TestimonialComponent implements OnInit {
         date: '01/01/2021'
       },
       {
-        message: 'J’ai fais appel à Lumia ouverture pour la qualité de leur produits, l’assurance que leurs salariés sontcompétents et le conseil qu’ils m’ont apporté. Ayant une parcelle particulière, ils ont su me dire quel était le meilleur choix de portail.Le portail coulissant de 5m est adapté et a été réalisé sur mesure. Beau travail !',
+        message: 'J’ai fais appel à Lumia ouvertures pour la qualité de leur produits, l’assurance que leurs salariés sontcompétents et le conseil qu’ils m’ont apporté. Ayant une parcelle particulière, ils ont su me dire quel était le meilleur choix de portail.Le portail coulissant de 5m est adapté et a été réalisé sur mesure. Beau travail !',
         author: 'Bleck.A',
         date: '01/01/2021'
       }

@@ -26,11 +26,11 @@ switch ($_SERVER['REQUEST_METHOD']) {
 		 $headers  = "MIME-Version: 1.0\r\n";
 		 $headers .= "Reply-To: ". $email . "\r\n";
 		 $headers .= "Content-type: text/html; charset= utf8\n";
-		 $headers .= "From: Lumiaouverture.fr  <noreply@lumiaouverture.fr>";
+		 $headers .= "From: lumiaouvertures.fr  <noreply@lumiaouvertures.fr>";
 
 		 $to = 'arison.investissement@gmail.com';
 
-		 $subject = 'Nouvelle demande de devis sur Lumiaouverture.fr';
+		 $subject = 'Nouvelle demande de devis sur lumiaouvertures.fr';
 
 	// Set Message
 	$message .= '
@@ -38,7 +38,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
 <html>
 
 <head>
-  <title>Demande de devis sur Lumiaouverture.fr</title>
+  <title>Demande de devis sur lumiaouvertures.fr</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -221,7 +221,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
                       <tr>
                         <td align="center"
                           style="font-size: 25px; font-family: Helvetica Neue, Arial, sans-serif; font-weight: bold; color: #000; padding: 0px 0 15px;"
-                          class="padding">Prise de contact depuis <span style="color: #3164B3">Lumiaouverture.fr</span></td>
+                          class="padding">Prise de contact depuis <span style="color: #3164B3">lumiaouvertures.fr</span></td>
                       </tr>
                       <tr>
                         <td align="left"
@@ -300,7 +300,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
           <tr>
             <td align="center"
               style="font-size: 12px; line-height: 18px; font-family: Helvetica Neue, Arial, sans-serif; color:grey;">
-              © 2018 Lumia ouverture. Tous droits réservés.
+              © 2018 Lumia ouvertures. Tous droits réservés.
             </td>
           </tr>
         </table>
