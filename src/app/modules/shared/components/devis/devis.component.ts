@@ -38,12 +38,17 @@ export class DevisComponent implements OnInit {
 
   toggleDevis(): void {
     this.isVisible = false;
+    if (!this.isVisible) {
+      this.showCategory = false;
+      this.showProductModel = false;
+      this.showQty = false;
+      this.showProjectType = false;
+      this.devisForm.reset();
+    }
     this.toggle.emit(this.isVisible);
   }
 
   sendEmail(): void {
-    console.log('Your form data : ', this.devisForm.value);
-
     if (!this.devisForm.valid) {
       this.showError = true;
     } else {

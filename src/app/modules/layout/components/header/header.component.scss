@@ -37,11 +37,14 @@
   div.scrollmenu {
     overflow: auto;
     white-space: nowrap;
+    margin-left: 42px;
 
     .first-item {
       background-color: #3164B3;
       color: white;
       border-bottom: 3px solid #3164B3;
+      position: fixed;
+      left: 0;
 
       .service-icon {
         position: relative;

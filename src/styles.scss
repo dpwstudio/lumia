@@ -19,6 +19,17 @@
   }
 }
 
+@media screen and (max-width: 500px) {
+  .first-title {
+    text-transform: uppercase;
+
+    &:after {
+      top: 16px;
+      left: -25px;
+    }
+  }
+}
+
 .carousel-indicators li {
   margin: 1px 7px;
 }
