@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./slider.component.scss']
 })
 export class SliderComponent implements OnInit {
-  showVideo = true;
+  showVideo = false;
   showDevis = false;
   constructor() { }
 

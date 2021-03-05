@@ -2,8 +2,6 @@
   font-size: 65px;
 }
 
-
-
 p {
   color: white;
   font-size: 20px;
@@ -17,12 +15,19 @@ p {
 }
 
 @media (max-width: 500px) {
+  .item {
+    height: 650px !important;
+  }
+
   .carousel-title {
-    font-size: 30px;
+    font-size: 24px;
   }
 
   p {
-    font-size: 17px;
+    font-size: 15px;
+  }
+  .btn-theme {
+    font-size: 11px;
   }
 }
 
@@ -73,14 +78,14 @@ p {
 }
 
 @media screen and (max-width: 768px) {
-  .video .content-video video{
+  .video .content-video video {
     width: 80% !important;
     border-radius: 20px;
   }
 }
 
 @media screen and (max-width: 500px) {
-  .video .content-video video{
+  .video .content-video video {
     width: 100% !important;
     padding: 10px;
   }

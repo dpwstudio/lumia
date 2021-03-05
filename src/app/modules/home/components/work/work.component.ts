@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./work.component.scss']
 })
 export class WorkComponent implements OnInit {
+  showVideo = true;
 
   constructor() { }
 
