@@ -22,85 +22,15 @@
   <!--// end row -->
 
   <div class="row margin-b-50">
-
-    <div class="col-sm-4 sm-margin-b-50">
+    <div class="col-sm-4 sm-margin-b-50 text-center" *ngFor="let shutter of windows">
       <div class="margin-b-20">
         <div class="animated zoomIn">
-          <img class="img-responsive" src="assets/img/portail/portail-1.jpg" alt="">
+          <img class="img-responsive" src="{{shutter.img}}" alt="">
         </div>
       </div>
-      <h4 class="text-center"><a href="#">Portails PVC</a></h4>
-      <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut
-        consequat siad esqudiat dolor</p>
+      <h4 class="text-center"><a href="#">{{shutter.title}}</a></h4>
+      <p>{{shutter.text}}</p>
     </div>
-
-
-
-    <div class="col-sm-4 sm-margin-b-50">
-      <div class="margin-b-20">
-        <div class="animated zoomIn">
-          <img class="img-responsive" src="assets/img/portail/portail-1.jpg">
-        </div>
-      </div>
-      <h4 class="text-center"><a href="#">Portails Aluminium</a></h4>
-      <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut
-        consequat siad esqudiat dolor</p>
-    </div>
-
-
-
-    <div class="col-sm-4 sm-margin-b-50">
-      <div class="margin-b-20">
-        <div class="animated zoomIn">
-          <img class="img-responsive" src="assets/img/portail/portail-1.jpg" alt="">
-        </div>
-      </div>
-      <h4 class="text-center"><a href="#">Portails bois</a></h4>
-      <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut
-        consequat siad esqudiat dolor</p>
-    </div>
-
-  </div>
-  <!--// end row -->
-  <div class="row margin-b-50">
-
-    <div class="col-sm-4 sm-margin-b-50">
-      <div class="margin-b-20">
-        <div class="animated zoomIn">
-          <img class="img-responsive" src="assets/img/portail/portail-1.jpg" alt="">
-        </div>
-      </div>
-      <h4 class="text-center"><a href="#">Clôtures PVC</a></h4>
-      <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut
-        consequat siad esqudiat dolor</p>
-    </div>
-
-
-
-    <div class="col-sm-4 sm-margin-b-50">
-      <div class="margin-b-20">
-        <div class="animated zoomIn">
-          <img class="img-responsive" src="assets/img/portail/portail-1.jpg">
-        </div>
-      </div>
-      <h4 class="text-center"><a href="#">Clôtures Aluminium</a></h4>
-      <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut
-        consequat siad esqudiat dolor</p>
-    </div>
-
-
-
-    <div class="col-sm-4 sm-margin-b-50">
-      <div class="margin-b-20">
-        <div class="animated zoomIn">
-          <img class="img-responsive" src="assets/img/portail/portail-1.jpg" alt="">
-        </div>
-      </div>
-      <h4 class="text-center"><a href="#">Clôtures bois</a></h4>
-      <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut
-        consequat siad esqudiat dolor</p>
-    </div>
-
   </div>
   <!--// end row -->
 </div>

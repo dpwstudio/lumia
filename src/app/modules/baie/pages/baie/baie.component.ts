@@ -15,19 +15,19 @@ export class BaieComponent implements OnInit {
   ngOnInit(): void {
     this.berries = [
       {
-        img: 'assets/img/baies/baie-1.jpg',
+        img: 'assets/img/baies/baie-pvc.jpg',
         title: 'Baies coulissantes PVC',
-        text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor'
+        text: 'Baie coulissante à levage faite en PVC'
       },
       {
-        img: 'assets/img/baies/baie-1.jpg',
+        img: 'assets/img/baies/baie-alu.jpg',
         title: 'Baies coulissantes Aluminium',
-        text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor'
+        text: 'Baie coulissante à levage faite en aluminium'
       },
       {
-        img: 'assets/img/baies/baie-1.jpg',
+        img: 'assets/img/baies/baie-bois.jpg',
         title: 'Baies coulissantes bois',
-        text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor'
+        text: 'Baie coulissante à levage faite en bois'
       }
     ];
   }

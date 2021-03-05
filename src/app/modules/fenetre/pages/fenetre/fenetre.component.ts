@@ -15,34 +15,19 @@ export class FenetreComponent implements OnInit {
   ngOnInit(): void {
     this.windows = [
       {
-        img: 'assets/img/fenetre/fenetre-pvc.jpg',
+        img: 'assets/img/fenetre/fenetre-pvc2.jpg',
         title: 'Fenêtres PVC',
-        text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor'
+        text: 'Bestseller- les fenêtres choisies par près de 85% d’investisseurs'
       },
       {
-        img: 'assets/img/fenetre/fenetre-pvc.jpg',
+        img: 'assets/img/fenetre/fenetre-alu.jpg',
         title: 'Fenêtres Aluminium',
-        text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor'
+        text: 'Un design impressionnant et de très grandes possibilités de construction'
       },
       {
-        img: 'assets/img/fenetre/fenetre-pvc.jpg',
+        img: 'assets/img/fenetre/fenetre-bois.jpg',
         title: 'Fenêtres bois',
-        text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor'
-      },
-      {
-        img: 'assets/img/fenetre/fenetre-pvc.jpg',
-        title: 'Portes-fenêtres PVC',
-        text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor'
-      },
-      {
-        img: 'assets/img/fenetre/fenetre-pvc.jpg',
-        title: 'Portes-fenêtres Aluminium',
-        text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor'
-      },
-      {
-        img: 'assets/img/fenetre/fenetre-pvc.jpg',
-        title: 'Portes-fenêtres bois',
-        text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor'
+        text: 'Un choix intemporel – la nature qui est toujours à la mode'
       }
     ]
   }

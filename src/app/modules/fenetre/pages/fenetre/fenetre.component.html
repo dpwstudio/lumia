@@ -13,14 +13,16 @@
   <div class="row margin-b-40">
     <div class="col-sm-12">
       <h2 class="first-title">Voici ce que nous proposons</h2>
-      <p>Toutes nos gammes de fenêtres et porte-fenêtres PVC, ALU et BOIS sont éligibles au crédit d’impôts selon loi de finance en vigueur. Leurs performances thermiques et
-        phoniques les placent parmi les plus isolantes du marché.</p>
+      <p>Les fenêtres sont un élément architectural très important, mais souvent sous-estimé, de chaque maison et
+        appartement. Elles devraient assurer un éclairage optimal de l’intérieur, la sécurité, la chaleur et le silence,
+        ainsi que garantir une utilisation longue et sans problèmes. La menuiserie de fenêtres a également une fonction
+        esthétique, soulignant le caractère individuel de chaque investissement.</p>
     </div>
   </div>
   <!--// end row -->
 
   <div class="row margin-b-50">
-    <div class="col-sm-4 margin-b-30" *ngFor="let window of windows">
+    <div class="col-sm-4 margin-b-30 text-center" *ngFor="let window of windows">
       <div class="margin-b-20">
         <div class="animated zoomIn">
           <img class="img-responsive" src="{{window.img}}" alt="">

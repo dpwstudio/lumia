@@ -20,28 +20,28 @@ export class PortailComponent implements OnInit {
   ngOnInit(): void {
     this.windows = [
       {
-        img: 'assets/img/fenetre/fenetre-pvc.jpg',
-        title: 'Fenêtres PVC',
+        img: 'assets/img/portail/portail-pvc.jpg',
+        title: 'Portails PVC',
         text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor'
       },
       {
-        img: 'assets/img/fenetre/fenetre-pvc.jpg',
-        title: 'Fenêtres PVC - Aluminium',
+        img: 'assets/img/portail/portail-alu.jpg',
+        title: 'Portails Aluminium',
         text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor'
       },
       {
-        img: 'assets/img/fenetre/fenetre-pvc.jpg',
-        title: 'Fenêtres bois',
+        img: 'assets/img/portail/portail-bois.jpg',
+        title: 'Portails bois',
         text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor'
       },
       {
-        img: 'assets/img/fenetre/fenetre-pvc.jpg',
-        title: 'Fenêtres bois - Aluminium',
+        img: 'assets/img/portail/cloture-pvc.jpg',
+        title: 'Clôture PVC',
         text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor'
       },
       {
-        img: 'assets/img/fenetre/fenetre-pvc.jpg',
-        title: 'Fenêtres aluminium',
+        img: 'assets/img/portail/cloture-alu.jpg',
+        title: 'Clôture aluminium',
         text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor'
       }
     ]
