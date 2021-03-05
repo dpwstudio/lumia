@@ -118,11 +118,14 @@
             <h6 style="color: white; font-size: 20px; width: 100%;">Vous avez un projet, une envie, une idée ?</h6>
             <p style="color: white; font-size: 20px;">Lumia ouvertures vous accompagne en vous offrant l’une des gammes
               les plus larges du marché. Design classique ou contemporain, Fenêtres, portes, volets ou portails, PVC,
-              RFP, ALU, Bois ou Mixte.
+              ALU ou Bois.
               Laissez-vous guider et trouvez la menuiserie qui répond à toutes vos envies.</p>
-            <p style="color: white; font-size: 20px; margin-bottom: 40px;">Rien ne vous engage.</p>
-            <a href="#" class="btn-theme btn-theme-sm btn-white-brd text-uppercase">
-              Contactez-nous</a>
+            <p style="color: white; font-size: 20px; margin-bottom: 40px;">Faites une demande de devis c'est gratuit et
+              sans engagement.</p>
+            <a (click)="showDevis = true" class="btn-theme btn-theme-sm btn-white-brd text-uppercase">
+              Demande de devis
+              <i class="fas fa-arrow-right margin-l-5"></i>
+            </a>
           </div>
         </div>
       </div>
@@ -132,3 +135,4 @@
 <!-- End Promo Section -->
 
 <!--========== END PAGE LAYOUT ==========-->
+<app-devis [isVisible]="showDevis" (toggle)="showDevis = $event"></app-devis>

@@ -8,6 +8,7 @@ import { Product } from 'src/app/models/Product.model';
 })
 export class BaieComponent implements OnInit {
   berries: Product[] = [];
+  showDevis = false;
 
   constructor() { }
 
@@ -15,27 +16,17 @@ export class BaieComponent implements OnInit {
     this.berries = [
       {
         img: 'assets/img/baies/baie-1.jpg',
-        title: 'Baie coulissante PVC',
+        title: 'Baies coulissantes PVC',
         text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor'
       },
       {
         img: 'assets/img/baies/baie-1.jpg',
-        title: 'Baie coulissante PVC - Aluminium',
+        title: 'Baies coulissantes Aluminium',
         text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor'
       },
       {
         img: 'assets/img/baies/baie-1.jpg',
-        title: 'Baie coulissante bois',
-        text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor'
-      },
-      {
-        img: 'assets/img/baies/baie-1.jpg',
-        title: 'Baie coulissante bois - Aluminium',
-        text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor'
-      },
-      {
-        img: 'assets/img/baies/baie-1.jpg',
-        title: 'Baie coulissante aluminium',
+        title: 'Baies coulissantes bois',
         text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor'
       }
     ];

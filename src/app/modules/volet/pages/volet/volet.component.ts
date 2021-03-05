@@ -8,29 +8,24 @@ import { Product } from 'src/app/models/Product.model';
 })
 export class VoletComponent implements OnInit {
   shutters: Product[] = [];
-
+  showDevis = false;
   constructor() { }
 
   ngOnInit(): void {
     this.shutters = [
       {
         img: 'assets/img/volets/volet-4.png',
-        title: 'Volets roulants',
+        title: 'Volets en PVC',
         text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor'
       },
       {
         img: 'assets/img/volets/volet-4.png',
-        title: 'Volets de système monobloc',
+        title: 'Volets en aluminium',
         text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor'
       },
       {
         img: 'assets/img/volets/volet-4.png',
-        title: 'Volets encastrés',
-        text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor'
-      },
-      {
-        img: 'assets/img/volets/volet-4.png',
-        title: 'Brise soleil orientable',
+        title: 'Volets en bois',
         text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor'
       }
     ];

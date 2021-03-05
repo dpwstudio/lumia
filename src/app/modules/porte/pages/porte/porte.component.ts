@@ -8,6 +8,7 @@ import { Product } from 'src/app/models/Product.model';
 })
 export class PorteComponent implements OnInit {
   doors: Product[] = [];
+  showDevis = false;
 
   constructor() { }
 
@@ -15,17 +16,17 @@ export class PorteComponent implements OnInit {
     this.doors = [
       {
         img: 'assets/img/porte/porte-1.png',
-        title: 'Porte extérieure en PVC',
+        title: 'Portes d\'entrée en PVC',
         text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor'
       },
       {
         img: 'assets/img/porte/porte-2.png',
-        title: 'Porte extérieure en Bois',
+        title: 'Portes d\'entrée en Aluminium',
         text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor'
       },
       {
         img: 'assets/img/porte/porte-3.png',
-        title: 'Porte extérieure en Aluminium',
+        title: 'Portes d\'entrée en Bois',
         text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor'
       },
       {

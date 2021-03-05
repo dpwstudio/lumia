@@ -8,6 +8,7 @@ import { Product } from 'src/app/models/Product.model';
 })
 export class FenetreComponent implements OnInit {
   windows: Product[] = [];
+  showDevis = false;
 
   constructor() { }
 
@@ -20,7 +21,7 @@ export class FenetreComponent implements OnInit {
       },
       {
         img: 'assets/img/fenetre/fenetre-pvc.jpg',
-        title: 'Fenêtres PVC - Aluminium',
+        title: 'Fenêtres Aluminium',
         text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor'
       },
       {
@@ -30,12 +31,17 @@ export class FenetreComponent implements OnInit {
       },
       {
         img: 'assets/img/fenetre/fenetre-pvc.jpg',
-        title: 'Fenêtres bois - Aluminium',
+        title: 'Portes-fenêtres PVC',
         text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor'
       },
       {
         img: 'assets/img/fenetre/fenetre-pvc.jpg',
-        title: 'Fenêtres aluminium',
+        title: 'Portes-fenêtres Aluminium',
+        text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor'
+      },
+      {
+        img: 'assets/img/fenetre/fenetre-pvc.jpg',
+        title: 'Portes-fenêtres bois',
         text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor'
       }
     ]

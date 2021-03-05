@@ -13,6 +13,7 @@ interface Window {
 })
 export class PortailComponent implements OnInit {
   windows: Window[] = [];
+  showDevis = false;
 
   constructor() { }
 
