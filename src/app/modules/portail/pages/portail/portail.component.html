@@ -22,14 +22,14 @@
   <!--// end row -->
 
   <div class="row margin-b-50">
-    <div class="col-sm-4 sm-margin-b-50 text-center" *ngFor="let shutter of windows">
+    <div class="col-sm-4 sm-margin-b-50 text-center" *ngFor="let portal of portals">
       <div class="margin-b-20">
         <div class="animated zoomIn">
-          <img class="img-responsive" src="{{shutter.img}}" alt="">
+          <img class="img-responsive" src="{{portal.img}}" alt="">
         </div>
       </div>
-      <h4 class="text-center"><a href="#">{{shutter.title}}</a></h4>
-      <p>{{shutter.text}}</p>
+      <h4 class="text-center"><a href="#">{{portal.title}}</a></h4>
+      <p>{{portal.text}}</p>
     </div>
   </div>
   <!--// end row -->

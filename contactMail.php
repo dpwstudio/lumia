@@ -22,7 +22,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
 		 $headers .= "Content-type: text/html; charset= utf8\n";
 		 $headers .= "From: lumiaouvertures.fr  <noreply@lumiaouvertures.fr>";
 
-		 $to = 'arison.investissement@gmail.com';
+		 $to = 'contact@lumiaouvertures.fr';
 
 		 $subject = 'Prise de contact sur lumiaouvertures.fr';
 

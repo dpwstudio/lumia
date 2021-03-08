@@ -19,26 +19,46 @@ export class TestimonialComponent implements OnInit {
   ngOnInit(): void {
     this.comments = [
       {
-        message: 'Très bonnes prestations ! [petite suggestion: assurer meilleure formation des poseurs pour des points particuliers (exemple: coupes d\’onglet particulières…) ; équipement mieux adapté…]',
-        author: 'Mélanie.G',
-        date: '01/01/2021'
+        message: 'Les gros chantiers ne leur font pas peur . Bravo à toute l équipe !',
+        author: 'Jeanne M',
+        date: '03/09/2020'
       },
       {
-        message: 'Bonne réactivité sur le devis, délai de livraison respecté, pose propre et soignée.',
-        author: 'Jeanne.V',
-        date: '01/01/2021'
+        message: 'Équipe commerciale vraiment a l Ecoute . Techniciens au top . Bravo !',
+        author: 'Pierre K',
+        date: '06/05/2020'
       },
       {
-        message: 'Engagement pris et tenu dans les délais. Bravo pour la qualité, la pose et l’efficacité des employés (léger problème de réglage, réglé dès le lendemain de notre demande).',
-        author: 'Franck.A',
-        date: '01/01/2021'
+        message: 'Du sur-mesure quasi au prix du standard . Incroyable !',
+        author: 'Jean T',
+        date: '26/04/2020'
       },
       {
-        message: 'J’ai fais appel à Lumia ouvertures pour la qualité de leur produits, l’assurance que leurs salariés sontcompétents et le conseil qu’ils m’ont apporté. Ayant une parcelle particulière, ils ont su me dire quel était le meilleur choix de portail.Le portail coulissant de 5m est adapté et a été réalisé sur mesure. Beau travail !',
-        author: 'Bleck.A',
-        date: '01/01/2021'
-      }
-    ]
+        message: 'Rien à dire. Qualité et professionnalisme au rdv.',
+        author: 'Daniel R',
+        date: '22/04/2020'
+      },
+      {
+        message: 'Rdv pris en 48h, commande validee dans la foulée, fénetres posées en temps record. Je recommande.',
+        author: 'Eloïse F',
+        date: '18/04/2020'
+      },
+      {
+        message: 'On a fait un devis chez tryba, Lumia ouvertures était beaucoup beaucoup moins cher pour une qualité équivalente et un travail irréprochable.',
+        author: 'Fabien B',
+        date: '15/04/2020'
+      },
+      {
+        message: 'Une équipe réactive et très professionnelle. Parfait !',
+        author: 'Louis B',
+        date: '08/04/2020'
+      },
+      {
+        message: 'Des prix attractifs pour une qualité irréprochable. Je recommande fortement !',
+        author: 'Aurelie M',
+        date: '02/04/2020'
+      },
+    ];
   }
 
 }

@@ -7,6 +7,10 @@
          <div class="col-sm-2 sm-margin-b-50">
            <img class="footer-logo" src="assets/img/logo2.png" alt="Lumia Ouvertures"
              style="margin-bottom: 20px; width: 150px;">
+           <h4 style="font-size: 16px;">LUMIA OUVERTURES SARL</h4>
+           <p style="margin: 0;">128 rue la boetie</p>  
+           <p style="margin: 0;">75008 Paris</p> 
+           <p style="margin: 0;">RCS Paris 881 736 573</p> 
          </div>
          <div class="col-sm-3 sm-margin-b-50">
            <!-- List -->
@@ -29,24 +33,29 @@
          </div>
          <div class="col-sm-3 sm-margin-b-50">
            <!-- List -->
-           <!-- <h4>Informations</h4>
+           <h4>Informations</h4>
            <ul class="list-unstyled footer-list">
-             <li class="footer-list-item"><a class="footer-list-link" [routerLink]="['/']"
+             <li class="footer-list-item">
+               <a class="footer-list-link" [routerLink]="['/terms']"
                  routerLinkActive="router-link-active">Mentions légales</a></li>
-             <li class="footer-list-item"><a class="footer-list-link" [routerLink]="['/']"
-                 routerLinkActive="router-link-active">FAQ</a></li>
-           </ul> -->
+             <!-- <li class="footer-list-item"><a class="footer-list-link" [routerLink]="['/']"
+                 routerLinkActive="router-link-active">FAQ</a></li> -->
+           </ul>
            <!-- End List -->
          </div>
          <div class="col-sm-4 sm-margin-b-30">
            <h4>Contactez-nous</h4>
            <form [formGroup]="contactForm">
-             <input type="text" class="form-control footer-input margin-b-20" formControlName="name" placeholder="Nom" required>
-             <input type="email" class="form-control footer-input margin-b-20" formControlName="email" placeholder="Email" required>
-             <input type="text" class="form-control footer-input margin-b-20" formControlName="subject" placeholder="Objet" required>
-             <textarea class="form-control footer-input margin-b-30" rows="5" formControlName="message" placeholder="Message" required></textarea>
-             <button type="submit" class="btn-theme btn-theme-sm btn-base-bg text-uppercase"[disabled]="!contactForm.valid"
-             (click)="sendEmail()" style="border-radius: 5px;">Envoyer</button>
+             <input type="text" class="form-control footer-input margin-b-20" formControlName="name" placeholder="Nom"
+               required>
+             <input type="email" class="form-control footer-input margin-b-20" formControlName="email"
+               placeholder="Email" required>
+             <input type="text" class="form-control footer-input margin-b-20" formControlName="subject"
+               placeholder="Objet" required>
+             <textarea class="form-control footer-input margin-b-30" rows="5" formControlName="message"
+               placeholder="Message" required></textarea>
+             <button type="submit" class="btn-theme btn-theme-sm btn-base-bg text-uppercase"
+               [disabled]="!contactForm.valid" (click)="sendEmail()" style="border-radius: 5px;">Envoyer</button>
            </form>
          </div>
        </div>
@@ -86,20 +95,20 @@
  <!--========== END FOOTER ==========-->
 
  <div class="content-alert">
-  <div class="alert alert-success animated bounceIn" role="alert" *ngIf="showSuccess">
-    <strong class="margin-r-10">Envoyé !</strong> Votre message a été envoyé avec succès.
-    <i class="fas fa-times margin-l-10" (click)="showSuccess = false"></i>
-  </div>
-  
-  <div class="alert alert-danger animated tada" role="alert" *ngIf="showError">
-    <strong class="margin-r-10">Erreur !</strong> Veuillez compléter les champs manquants.
-    <i class="fas fa-times margin-l-10" (click)="showError = false"></i>
-  </div>
-</div>
+   <div class="alert alert-success animated bounceIn" role="alert" *ngIf="showSuccess">
+     <strong class="margin-r-10">Envoyé !</strong> Votre message a été envoyé avec succès.
+     <i class="fas fa-times margin-l-10" (click)="showSuccess = false"></i>
+   </div>
 
-<div class="loading" *ngIf="loading">
-  <div class="animated pulse infinite text-center">
-    <img src="assets/img/logo2.png" alt="" width="140">
-    <p class="text-white mt-2">Veuillez patienter...</p>
-  </div>
-</div>
+   <div class="alert alert-danger animated tada" role="alert" *ngIf="showError">
+     <strong class="margin-r-10">Erreur !</strong> Veuillez compléter les champs manquants.
+     <i class="fas fa-times margin-l-10" (click)="showError = false"></i>
+   </div>
+ </div>
+
+ <div class="loading" *ngIf="loading">
+   <div class="animated pulse infinite text-center">
+     <img src="assets/img/logo2.png" alt="" width="140">
+     <p class="text-white mt-2">Veuillez patienter...</p>
+   </div>
+ </div>

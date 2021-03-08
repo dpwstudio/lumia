@@ -11,10 +11,14 @@ import { ClientComponent } from './components/client/client.component';
 import { PromoComponent } from './components/promo/promo.component';
 import { WorkComponent } from './components/work/work.component';
 import { SharedModule } from '../shared/shared.module';
+import { TermsComponent } from './pages/terms/terms.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, SliderComponent, ServiceComponent, TestimonialComponent, ClientComponent, PromoComponent, WorkComponent],
+  declarations: [
+    HomeComponent,
+    SliderComponent,
+    ServiceComponent, TestimonialComponent, ClientComponent, PromoComponent, WorkComponent, TermsComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,
