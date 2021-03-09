@@ -13,7 +13,7 @@
       <p style="color: white; font-size: 20px; margin-bottom: 40px;">Un projet en neuf ou en rénovation ?<br>Venez nous en parler, c'est
         gratuit et sans engagement !
       </p>
-      <a href="#" class="btn-theme btn-theme-sm btn-white-brd text-uppercase">
+      <a (click)="showContact = true" class="btn-theme btn-theme-sm btn-white-brd text-uppercase">
         <i class="service-icon icon-phone"></i>
        Contactez-nous</a>
     </div>
@@ -23,3 +23,4 @@
 <app-testimonial></app-testimonial>
 
 <!--========== END PAGE LAYOUT ==========-->
+<app-contact [isVisible]="showContact" (toggle)="showContact = $event"></app-contact>
