@@ -8,6 +8,21 @@
   width: 100%;
 }
 
+.logo-effy {
+  display: flex;
+  align-items: center;
+  height: 26px;
+  margin-top: -9px;
+  justify-content: center;
+
+  span {
+    font-size: 9px;
+    margin-right: 5px;
+    text-transform: uppercase;
+    color: #515769;
+  }
+}
+
 .header .nav-item-child {
   font-size: 14px;
   font-weight: bold;
@@ -109,6 +124,19 @@
 @media screen and (max-width: 500px) {
   .mobile {
     display: block;
+
+    .logo-effy {
+      display: flex;
+      align-items: center;
+      margin-top: 0;
+
+      span {
+        font-size: 9px;
+        margin-right: 5px;
+        text-transform: uppercase;
+        color: #515769
+      }
+    }
   }
 
   .desktop {
