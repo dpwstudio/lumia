@@ -1,3 +1,7 @@
+.carousel {
+  margin-top: 94px;
+}
+
 .carousel-title {
   font-size: 65px;
 }
@@ -8,15 +12,15 @@ p {
   font-weight: 500;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 812px) {
   .carousel-title {
-    font-size: 50px;
+    font-size: 40px;
   }
 }
 
 @media (max-width: 500px) {
   .item {
-    height: 500px !important;
+    height: 400px !important;
   }
 
   .carousel-title {
@@ -24,7 +28,7 @@ p {
   }
 
   .carousel-centered {
-    margin-top: 35px;
+    margin-top: 0;
   }
 
   p {

@@ -34,3 +34,52 @@
 .carousel-indicators li {
   margin: 1px 7px;
 }
+
+
+.content-alert {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+
+  .alert {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    z-index: 999999;
+    border: none;
+    color: white;
+
+    i.fas {
+      cursor: pointer;
+    }
+  }
+}
+
+.alert-success {
+  background: #00b700;
+}
+
+.alert-danger {
+  background: #e20000;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: #000000f2;
+  width: 100%;
+  height: 100%;
+  z-index: 10020;
+
+  p {
+    margin-top: 10px;
+    color: #fff;
+  }
+}
