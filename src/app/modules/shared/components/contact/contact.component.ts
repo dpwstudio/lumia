@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output, SimpleChanges } from '@angular/core';
+import { Component, EventEmitter, HostListener, Input, OnInit, Output, SimpleChanges } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { EmailService } from 'src/app/services/email/email.service';
@@ -20,10 +20,13 @@ export class ContactComponent implements OnInit {
   loading = false;
   showSuccess = false;
   showError = false;
+  innerWidth = 0;
+  innerHeight = 0;
 
   constructor(private formBuilder: FormBuilder, private router: Router, private emailService: EmailService) { }
 
   ngOnInit(): void {
+    this.onResize();
   }
 
   toggleContact(): void {
@@ -34,8 +37,17 @@ export class ContactComponent implements OnInit {
     this.toggle.emit(this.isVisible);
   }
 
+  @HostListener('window:resize')
+  onResize(): void {
+    this.innerWidth = window.innerWidth;
+    this.innerHeight = window.innerHeight;
+  }
+
+  hasSmallScreen(): boolean {
+    return this.innerHeight < 414;
+  }
+
   sendEmail(): void {
-    console.log('Your form data : ', this.contactForm.value);
     if (!this.contactForm.valid) {
       this.showError = true;
     } else {
