@@ -488,7 +488,7 @@
       </div>
     </div> <!-- wizard container -->
   </div> <!-- row -->
-  <div class="row row-container" *ngIf="hasSmallScreen()">
+  <div class="row row-container" *ngIf="isVisible && hasSmallScreen()">
     <h2 style="color: white;">Votre écran est trop petit.</h2>
     <p style="color: white;">Veuillez mettre votre écran en mode portrait.</p>
   </div>

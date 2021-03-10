@@ -92,7 +92,7 @@
     </div>
   </div>
 </div>
-<div class="container-contact" *ngIf="hasSmallScreen()" style="flex-direction: column; align-items:flex-start;">
+<div class="container-contact" *ngIf="isVisible && hasSmallScreen()" style="flex-direction: column; align-items:flex-start;">
   <h2 style="color: white; margin-left: 20px;">Votre écran est trop petit.</h2>
   <p style="color: white; margin-left: 20px;">Veuillez mettre votre écran en mode portrait.</p>
 </div>
