@@ -1,6 +1,6 @@
 <!--   Big container   -->
 <div class="container" *ngIf="isVisible">
-  <div class="row row-container">
+  <div class="row row-container" *ngIf="!hasSmallScreen()">
     <!-- Wizard container -->
     <div class="wizard-container animated bounceIn">
       <i (click)="toggleDevis()" class="service-icon icon-close"></i>
@@ -59,12 +59,12 @@
               <i class="fas fa-check" *ngIf="showProjectType"></i>
             </span>
           </div>
-          
+
           <div class="tab-content">
             <div class="tab-pane active" id="category">
               <h4 class="info-text">QUEL TYPE DE PRODUIT RECHERCHEZ-VOUS ?</h4>
               <div class="row">
-                <div class="col-sm-4 col-xs-6">
+                <div class="col-sm-4 col-xs-4" style="min-height: 150px;">
                   <a href="#fenetres" data-toggle="tab" (click)="setCategory('Fenêtres et porte-fenêtres')">
                     <div class="choice" data-toggle="wizard-radio" rel="tooltip">
                       <input type="radio" formControlName="category" value="Fenêtres et porte-fenêtres">
@@ -75,7 +75,7 @@
                     </div>
                   </a>
                 </div>
-                <div class="col-sm-4 col-xs-6">
+                <div class="col-sm-4 col-xs-4" style="min-height: 150px;">
                   <a href="#baies" data-toggle="tab" (click)="setCategory('Baie coulissante')">
                     <div class="choice" data-toggle="wizard-radio" rel="tooltip">
                       <input type="radio" formControlName="category" value="Baie coulissante">
@@ -86,18 +86,18 @@
                     </div>
                   </a>
                 </div>
-                <div class="col-sm-4 col-xs-6">
+                <div class="col-sm-4 col-xs-4" style="min-height: 150px;">
                   <a href="#volets" data-toggle="tab" (click)="setCategory('Volets')">
                     <div class="choice" data-toggle="wizard-radio" rel="tooltip">
                       <input type="radio" formControlName="category" value="Volets">
                       <div class="icon">
-                        <img src="assets/img/icone/icone-volet.png" alt="" width="75">
+                        <img src="assets/img/icone/icone-volet.png" alt="" width="70">
                       </div>
                       <h6>Volets</h6>
                     </div>
                   </a>
                 </div>
-                <div class="col-sm-4 col-xs-6">
+                <div class="col-sm-4 col-xs-4" style="min-height: 150px;">
                   <a href="#portes" data-toggle="tab" (click)="setCategory('Porte d\'entrée')">
                     <div class="choice" data-toggle="wizard-radio" rel="tooltip">
                       <input type="radio" formControlName="category" value="Porte d'entrée">
@@ -108,12 +108,12 @@
                     </div>
                   </a>
                 </div>
-                <div class="col-sm-4 col-xs-6">
+                <div class="col-sm-4 col-xs-4" style="min-height: 150px;">
                   <a href="#portails" data-toggle="tab" (click)="setCategory('Portails et clôtures')">
                     <div class="choice" data-toggle="wizard-radio" rel="tooltip">
                       <input type="radio" formControlName="category" value="Portails et clôtures">
                       <div class="icon">
-                        <img src="assets/img/icone/icone-portail.png" alt="" width="75">
+                        <img src="assets/img/icone/icone-portail.png" alt="" width="70">
                       </div>
                       <h6>Portails et clôtures</h6>
                     </div>
@@ -126,7 +126,7 @@
             <div class="tab-pane animated bounceIn" id="fenetres">
               <h4 class="info-text">QUELLES FENÊTRES RECHERCHEZ-VOUS ? </h4>
               <div class="row">
-                <div class="col-sm-4 col-xs-6">
+                <div class="col-sm-4 col-xs-4">
                   <a href="#qty" data-toggle="tab" (click)="setProductModel('Fenêtres PVC')">
                     <div class="choice" data-toggle="wizard-radio" rel="tooltip">
                       <input type="radio" formControlName="productModel" value="Fenêtres PVC">
@@ -137,7 +137,7 @@
                     </div>
                   </a>
                 </div>
-                <div class="col-sm-4 col-xs-6">
+                <div class="col-sm-4 col-xs-4">
                   <a href="#qty" data-toggle="tab" (click)="setProductModel('Fenêtres Bois')">
                     <div class="choice" data-toggle="wizard-radio" rel="tooltip">
                       <input type="radio" formControlName="productModel" value="Fenêtres Bois">
@@ -148,7 +148,7 @@
                     </div>
                   </a>
                 </div>
-                <div class="col-sm-4 col-xs-6">
+                <div class="col-sm-4 col-xs-4">
                   <a href="#qty" data-toggle="tab" (click)="setProductModel('Fenêtres aluminium')">
                     <div class="choice" data-toggle="wizard-radio" rel="tooltip">
                       <input type="radio" formControlName="productModel" value="Fenêtres aluminium">
@@ -166,7 +166,7 @@
             <div class="tab-pane animated bounceIn" id="baies">
               <h4 class="info-text">QUELLES BAIES COULISSANTES RECHERCHEZ-VOUS ? </h4>
               <div class="row">
-                <div class="col-sm-4 col-xs-6">
+                <div class="col-sm-4 col-xs-4">
                   <a href="#qty" data-toggle="tab" (click)="setProductModel('Baies PVC')">
                     <div class="choice" data-toggle="wizard-radio" rel="tooltip">
                       <input type="radio" formControlName="productModel" value="Baies PVC">
@@ -177,7 +177,7 @@
                     </div>
                   </a>
                 </div>
-                <div class="col-sm-4 col-xs-6">
+                <div class="col-sm-4 col-xs-4">
                   <a href="#qty" data-toggle="tab" (click)="setProductModel('Baies Bois')">
                     <div class="choice" data-toggle="wizard-radio" rel="tooltip">
                       <input type="radio" formControlName="productModel" value="Baies Bois">
@@ -188,7 +188,7 @@
                     </div>
                   </a>
                 </div>
-                <div class="col-sm-4 col-xs-6">
+                <div class="col-sm-4 col-xs-4">
                   <a href="#qty" data-toggle="tab" (click)="setProductModel('Baies aluminium')">
                     <div class="choice" data-toggle="wizard-radio" rel="tooltip">
                       <input type="radio" formControlName="productModel" value="Baies aluminium">
@@ -206,7 +206,7 @@
             <div class="tab-pane animated bounceIn" id="volets">
               <h4 class="info-text">QUELLES PORTES RECHERCHEZ-VOUS ? </h4>
               <div class="row">
-                <div class="col-sm-4 col-xs-6">
+                <div class="col-sm-4 col-xs-4">
                   <a href="#qty" data-toggle="tab" (click)="setProductModel('Volets PVC')">
                     <div class="choice" data-toggle="wizard-radio" rel="tooltip"
                       title="This is good if you travel alone.">
@@ -218,7 +218,7 @@
                     </div>
                   </a>
                 </div>
-                <div class="col-sm-4 col-xs-6">
+                <div class="col-sm-4 col-xs-4">
                   <a href="#qty" data-toggle="tab" (click)="setProductModel('Volets Bois')">
                     <div class="choice" data-toggle="wizard-radio" rel="tooltip">
                       <input type="radio" formControlName="productModel" value="Volets Bois">
@@ -229,7 +229,7 @@
                     </div>
                   </a>
                 </div>
-                <div class="col-sm-4 col-xs-6">
+                <div class="col-sm-4 col-xs-4">
                   <a href="#qty" data-toggle="tab" (click)="setProductModel('Volets aluminium')">
                     <div class="choice" data-toggle="wizard-radio" rel="tooltip">
                       <input type="radio" formControlName="productModel" value="Volets aluminium">
@@ -245,7 +245,7 @@
             <div class="tab-pane animated bounceIn" id="portes">
               <h4 class="info-text">QUELLE PORTE RECHERCHEZ-VOUS ? </h4>
               <div class="row">
-                <div class="col-sm-4 col-xs-6">
+                <div class="col-sm-4 col-xs-4">
                   <a href="#qty" data-toggle="tab" (click)="setProductModel('Porte d\'entrée PVC')">
                     <div class="choice" data-toggle="wizard-radio" rel="tooltip">
                       <input type="radio" formControlName="productModel" value="Porte d'entrée PVC">
@@ -256,7 +256,7 @@
                     </div>
                   </a>
                 </div>
-                <div class="col-sm-4 col-xs-6">
+                <div class="col-sm-4 col-xs-4">
                   <a href="#qty" data-toggle="tab" (click)="setProductModel('Porte d\'entrée Bois')">
                     <div class="choice" data-toggle="wizard-radio" rel="tooltip">
                       <input type="radio" formControlName="productModel" value="Porte d'entrée Bois">
@@ -267,7 +267,7 @@
                     </div>
                   </a>
                 </div>
-                <div class="col-sm-4 col-xs-6">
+                <div class="col-sm-4 col-xs-4">
                   <a href="#qty" data-toggle="tab" (click)="setProductModel('Porte d\'entrée aluminium')">
                     <div class="choice" data-toggle="wizard-radio" rel="tooltip">
                       <input type="radio" formControlName="productModel" value="Porte d'entrée aluminium">
@@ -283,7 +283,7 @@
             <div class="tab-pane animated bounceIn" id="portails">
               <h4 class="info-text">QUELLES PORTAILS RECHERCHEZ-VOUS ? </h4>
               <div class="row">
-                <div class="col-sm-4 col-xs-6">
+                <div class="col-sm-4 col-xs-4">
                   <a href="#qty" data-toggle="tab" (click)="setProductModel('Portails PVC')">
                     <div class="choice" data-toggle="wizard-radio" rel="tooltip">
                       <input type="radio" formControlName="productModel" value="Portails PVC">
@@ -294,7 +294,7 @@
                     </div>
                   </a>
                 </div>
-                <div class="col-sm-4 col-xs-6">
+                <div class="col-sm-4 col-xs-4">
                   <a href="#qty" data-toggle="tab" (click)="setProductModel('Portails Bois')">
                     <div class="choice" data-toggle="wizard-radio" rel="tooltip">
                       <input type="radio" formControlName="productModel" value="Portails Bois">
@@ -305,7 +305,7 @@
                     </div>
                   </a>
                 </div>
-                <div class="col-sm-4 col-xs-6">
+                <div class="col-sm-4 col-xs-4">
                   <a href="#qty" data-toggle="tab" (click)="setProductModel('Portails aluminium')">
                     <div class="choice" data-toggle="wizard-radio" rel="tooltip">
                       <input type="radio" formControlName="productModel" value="Portails aluminium">
@@ -321,7 +321,7 @@
             <div class="tab-pane animated bounceIn" id="qty">
               <h4 class="info-text">COMBIEN SOUHAITEZ-VOUS EN CHANGER ?</h4>
               <div class="row">
-                <div class="col-sm-4 col-xs-6">
+                <div class="col-sm-4 col-xs-4">
                   <a href="#projectType" data-toggle="tab" (click)="setQty('1')">
                     <div class="choice" data-toggle="wizard-radio" rel="tooltip">
                       <input type="radio" formControlName="qty" value="1">
@@ -331,7 +331,7 @@
                     </div>
                   </a>
                 </div>
-                <div class="col-sm-4 col-xs-6">
+                <div class="col-sm-4 col-xs-4">
                   <a href="#projectType" data-toggle="tab" (click)="setQty('2')">
                     <div class="choice" data-toggle="wizard-radio" rel="tooltip">
                       <input type="radio" formControlName="qty" value="2">
@@ -341,7 +341,7 @@
                     </div>
                   </a>
                 </div>
-                <div class="col-sm-4 col-xs-6">
+                <div class="col-sm-4 col-xs-4">
                   <a href="#projectType" data-toggle="tab" (click)="setQty('3')">
                     <div class="choice" data-toggle="wizard-radio" rel="tooltip">
                       <input type="radio" formControlName="qty" value="3">
@@ -351,7 +351,7 @@
                     </div>
                   </a>
                 </div>
-                <div class="col-sm-4 col-xs-6">
+                <div class="col-sm-4 col-xs-4">
                   <a href="#projectType" data-toggle="tab" (click)="setQty('4')">
                     <div class="choice" data-toggle="wizard-radio" rel="tooltip">
                       <input type="radio" formControlName="qty" value="4">
@@ -361,7 +361,7 @@
                     </div>
                   </a>
                 </div>
-                <div class="col-sm-4 col-xs-6">
+                <div class="col-sm-4 col-xs-4">
                   <a href="#projectType" data-toggle="tab" (click)="setQty('5')">
                     <div class="choice" data-toggle="wizard-radio" rel="tooltip">
                       <input type="radio" formControlName="qty" value="5">
@@ -371,7 +371,7 @@
                     </div>
                   </a>
                 </div>
-                <div class="col-sm-4 col-xs-6">
+                <div class="col-sm-4 col-xs-4">
                   <a href="#projectType" data-toggle="tab" (click)="setQty('Plus de 5')">
                     <div class="choice" data-toggle="wizard-radio" rel="tooltip">
                       <input type="radio" formControlName="qty" value="Plus de 5">
@@ -390,7 +390,7 @@
                   <a href="#finalized" data-toggle="tab" (click)="setProjectType('Rénovation')">
                     <div class="choice" data-toggle="wizard-radio" rel="tooltip">
                       <input type="radio" formControlName="projectType" value="Rénovation">
-                      <div class="icon" style="height: 130px; width: 130px; font-size: 12px;">
+                      <div class="icon project-type" style="height: 130px; width: 130px; font-size: 12px;">
                         RENOVATION
                       </div>
                     </div>
@@ -400,7 +400,7 @@
                   <a href="#finalized" data-toggle="tab" (click)="setProjectType('Construction neuve')">
                     <div class="choice" data-toggle="wizard-radio" rel="tooltip">
                       <input type="radio" formControlName="projectType" value="Construction neuve">
-                      <div class="icon" style="height: 130px; width: 130px; font-size: 12px;">
+                      <div class="icon project-type" style="height: 130px; width: 130px; font-size: 12px;">
                         CONSTRUCTION NEUVE
                       </div>
                     </div>
@@ -488,14 +488,19 @@
       </div>
     </div> <!-- wizard container -->
   </div> <!-- row -->
+  <div class="row row-container" *ngIf="hasSmallScreen()">
+    <h2 style="color: white;">Votre écran est trop petit.</h2>
+    <p style="color: white;">Veuillez mettre votre écran en mode portrait.</p>
+  </div>
 </div> <!--  big container -->
 
 <div class="content-alert">
   <div class="alert alert-success animated bounceIn" role="alert" *ngIf="showSuccess">
-    <strong class="margin-r-10">Envoyé !</strong> Votre demande a bien été prise en compte , un conseiller Lumia Ouvertures vous contactera dans les plus brefs délais.
+    <strong class="margin-r-10">Envoyé !</strong> Votre demande a bien été prise en compte , un conseiller Lumia
+    Ouvertures vous contactera dans les plus brefs délais.
     <i class="fas fa-times margin-l-10" (click)="showSuccess = false"></i>
   </div>
-  
+
   <div class="alert alert-danger animated tada" role="alert" *ngIf="showError">
     <strong class="margin-r-10">Erreur !</strong> Veuillez compléter les champs manquants.
     <i class="fas fa-times margin-l-10" (click)="showError = false"></i>
