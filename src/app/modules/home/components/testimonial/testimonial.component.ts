@@ -19,17 +19,17 @@ export class TestimonialComponent implements OnInit {
   ngOnInit(): void {
     this.comments = [
       {
-        message: 'Les gros chantiers ne leur font pas peur . Bravo à toute l équipe !',
+        message: 'Les gros chantiers ne leur font pas peur. Bravo à toute l équipe !',
         author: 'Jeanne M',
         date: '03/09/2020'
       },
       {
-        message: 'Équipe commerciale vraiment a l Ecoute . Techniciens au top . Bravo !',
+        message: 'Équipe commerciale vraiment a l\'écoute. Techniciens au top . Bravo !',
         author: 'Pierre K',
         date: '06/05/2020'
       },
       {
-        message: 'Du sur-mesure quasi au prix du standard . Incroyable !',
+        message: 'Du sur-mesure quasi au prix du standard. Incroyable !',
         author: 'Jean T',
         date: '26/04/2020'
       },
@@ -39,7 +39,7 @@ export class TestimonialComponent implements OnInit {
         date: '22/04/2020'
       },
       {
-        message: 'Rdv pris en 48h, commande validee dans la foulée, fénetres posées en temps record. Je recommande.',
+        message: 'Rdv pris en 48h, commande validee dans la foulée, fenêtres posées en temps record. Je recommande.',
         author: 'Eloïse F',
         date: '18/04/2020'
       },
