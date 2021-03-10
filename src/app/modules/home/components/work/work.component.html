@@ -9,7 +9,8 @@
       </div>
     </div>
     <div class="col-sm-6">
-      <video controls autoplay width="100%">
+      <img src="assets/img/video.png" alt="" width="100%" (click)="showVideo = true" *ngIf="!showVideo" style="cursor: pointer">
+      <video controls autoplay width="100%" *ngIf="showVideo">
         <source src="assets/videos/demo.mp4" type="video/mp4">
       </video>
     </div>
