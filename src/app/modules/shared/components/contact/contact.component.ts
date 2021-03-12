@@ -53,7 +53,6 @@ export class ContactComponent implements OnInit {
     } else {
       this.loading = true;
       this.emailService.sendEmailFromContact(JSON.stringify(this.contactForm.value)).subscribe(res => {
-        console.log('res', res);
         this.loading = false;
         this.showSuccess = true;
         this.contactForm.reset();

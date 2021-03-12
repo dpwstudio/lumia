@@ -26,13 +26,11 @@ export class FooterComponent implements OnInit {
   }
 
   sendEmail(): void {
-    console.log('Your form data : ', this.contactForm.value);
     if (!this.contactForm.valid) {
       this.showError = true;
     } else {
       this.loading = true;
       this.emailService.sendEmailFromContact(JSON.stringify(this.contactForm.value)).subscribe(res => {
-        console.log('res', res);
         this.loading = false;
         this.showSuccess = true;
         this.contactForm.reset();

@@ -57,7 +57,6 @@ export class DevisComponent implements OnInit {
     } else {
       this.loading = true;
       this.emailService.sendEmailFromDevis(JSON.stringify(this.devisForm.value)).subscribe((res: string) => {
-        console.log('res', res);
         this.loading = false;
         this.showSuccess = true;
         this.devisForm.reset();
