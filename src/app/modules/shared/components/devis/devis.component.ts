@@ -74,7 +74,7 @@ export class DevisComponent implements OnInit {
   }
 
   hasSmallScreen(): boolean {
-    return this.innerHeight < 414;
+    return this.innerHeight < 450;
   }
 
 
