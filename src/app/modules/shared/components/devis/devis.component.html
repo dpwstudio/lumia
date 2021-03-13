@@ -58,9 +58,7 @@
               <i class="fas fa-check" *ngIf="showProjectType"></i>
             </span>
           </div>
-          <div class="row text-center" *ngIf="hasSmallScreen()">
-            <p style="background: red; color: white; margin: 0; padding: 5px 0;">Veuillez mettre votre écran en mode portrait pour compléter le devis.</p>
-          </div>
+
           <div class="tab-content">
             <div class="tab-pane active" id="category">
               <h4 class="info-text">QUEL TYPE DE PRODUIT RECHERCHEZ-VOUS ?</h4>
@@ -415,7 +413,7 @@
                 <div class="col-sm-12">
                   <h4 class="info-text">FINALISER VOTRE DEMANDE</h4>
                 </div>
-                <div class="col-sm-6 col-xs-12">
+                <div class="col-sm-6" [class.col-xs-6]="hasSmallScreen()">
                   <div class="input-group">
                     <span class="input-group-addon">
                       <i class="service-icon icon-user" style="font-size: 20px; line-height: 30px;"></i>
@@ -445,7 +443,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-6  col-xs-12">
+                <div class="col-sm-6" [class.col-xs-6]="hasSmallScreen()">
                   <div class="input-group">
                     <span class="input-group-addon">
                       <i class="service-icon icon-map" style="font-size: 20px; line-height: 30px;"></i>
@@ -489,6 +487,7 @@
       </div>
     </div> <!-- wizard container -->
   </div> <!-- row -->
+
 </div> <!--  big container -->
 
 <div class="content-alert">
