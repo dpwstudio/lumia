@@ -18,12 +18,12 @@
       margin: 0 auto;
 
       .icon-close {
-        font-size: 30px;
-        color: white;
+        font-size: 25px;
+        color: #515769;
         cursor: pointer;
         position: absolute;
-        top: -35px;
-        right: 0;
+        top: 5px;
+        right: 5px;
       }
 
       .wizard-navigation {
@@ -123,6 +123,9 @@
 }
 
 @media screen and (max-width: 500px) {
+  .container {
+    padding: 5px;
+  }
   .row-container {
     width: 100% !important;
 
@@ -154,7 +157,7 @@
     }
 
     .info-text {
-      margin-bottom: 15px !important;
+      margin-bottom: 5px !important;
       font-size: 15px;
     }
 
@@ -174,10 +177,6 @@
     right: 5px;
   }
 
-  .form-control {
-    height: 30px !important;
-  }
-
   textarea.form-control {
     height: 50px !important;
   }
@@ -185,7 +184,7 @@
 
 @media screen and (max-width: 500px) {
   .wizard-card {
-    padding: 20px !important;
+    padding: 10px !important;
     min-height: 100%;
 
     .choice {

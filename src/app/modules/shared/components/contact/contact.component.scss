@@ -13,12 +13,12 @@
 }
 
 .icon-close {
-  font-size: 30px;
+  font-size: 25px;
   color: #010101;
   cursor: pointer;
   position: absolute;
-  right: 17px;
-  top: 17px;
+  right: 10px;
+  top: 10px;
 }
 
 input {
@@ -106,9 +106,27 @@ button:hover {
 }
 
 @media screen and (max-width: 500px) {
-  .contact100-more {
-    display: none;
+  .container-contact {
+    padding: 5px;
+
+    .wrap-contact100 {
+      border-radius: 15px;
+    }
+
+    .contact100-more {
+      display: none;
+    }
+
+    .contact100-form-title {
+      font-size: 20px !important;
+    }
+
+    .label-input100 {
+      font-size: 10px !important;
+    }
   }
+
+
 }
 
 .contact100-more::before {
@@ -167,15 +185,15 @@ button:hover {
   display: block;
   width: 100%;
   background: #f1f1f1;
-  font-size: 14px;
+  font-size: 12px;
   color: #666666;
   line-height: 1.2;
-  padding: 0 25px;
+  padding: 0 15px;
   border-radius: 5px;
 }
 
 input.input100 {
-  height: 40px;
+  height: 35px;
 }
 
 
@@ -259,6 +277,6 @@ textarea.input100 {
 
 @media (max-width: 576px) {
   .contact100-form {
-    padding: 56px 15px 63px 15px;
+    padding: 25px 15px 25px 15px;
   }
 }

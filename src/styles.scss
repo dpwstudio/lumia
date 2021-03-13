@@ -170,10 +170,10 @@
     box-shadow: none;
     border-radius: 0;
     font-weight: 400;
-    margin-bottom: 7px;
-    height: 36px;
-    padding: 7px 0;
-    font-size: 14px;
+    margin-bottom: 0;
+    height: 25px;
+    padding: 5px;
+    font-size: 12px;
     line-height: 1.42857;
   }
 
@@ -196,7 +196,7 @@
       line-height: 1.07143;
       color: #AAAAAA;
       font-weight: 400;
-      margin: 16px 0 0 0;
+      margin: 10px 0 0 0;
     }
   }
 
@@ -220,7 +220,7 @@
   .input-group .input-group-addon {
     border: 0;
     background: transparent;
-    padding: 6px 15px 0px;
+    padding: 6px 10px 0px 0;
   }
 }
 
