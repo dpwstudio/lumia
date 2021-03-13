@@ -122,10 +122,21 @@
   }
 }
 
+@media screen and (max-height: 450px) {
+  .wizard-navigation {
+    display: none;
+  }
+
+  .step-mobile {
+    display: flex !important;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .container {
     padding: 5px;
   }
+
   .row-container {
     width: 100% !important;
 

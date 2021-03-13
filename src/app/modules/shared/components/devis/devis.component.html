@@ -1,6 +1,6 @@
 <!--   Big container   -->
 <div class="container" *ngIf="isVisible">
-  <div class="row row-container" *ngIf="!hasSmallScreen()">
+  <div class="row row-container">
     <!-- Wizard container -->
     <div class="wizard-container animated bounceIn">
       <i (click)="toggleDevis()" class="service-icon icon-close"></i>
@@ -58,7 +58,9 @@
               <i class="fas fa-check" *ngIf="showProjectType"></i>
             </span>
           </div>
-
+          <div class="row text-center" *ngIf="hasSmallScreen()">
+            <p style="background: red; color: white; margin: 0; padding: 5px 0;">Veuillez mettre votre écran en mode portrait pour compléter le devis.</p>
+          </div>
           <div class="tab-content">
             <div class="tab-pane active" id="category">
               <h4 class="info-text">QUEL TYPE DE PRODUIT RECHERCHEZ-VOUS ?</h4>
@@ -487,10 +489,6 @@
       </div>
     </div> <!-- wizard container -->
   </div> <!-- row -->
-  <div class="row row-container" *ngIf="isVisible && hasSmallScreen()">
-    <h2 style="color: white;">Votre écran est trop petit.</h2>
-    <p style="color: white;">Veuillez mettre votre écran en mode portrait.</p>
-  </div>
 </div> <!--  big container -->
 
 <div class="content-alert">
