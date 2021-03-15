@@ -71,7 +71,6 @@ export class DevisComponent implements OnInit {
   onResize(): void {
     this.innerWidth = window.innerWidth;
     this.innerHeight = window.innerHeight;
-    console.log(this.innerHeight)
   }
 
   hasSmallScreen(): boolean {

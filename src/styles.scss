@@ -143,6 +143,13 @@
   }
 
   @media screen and (max-height: 450px) {
+    .wizard-header {
+      padding: 0 0 10px;
+    }
+    .my-category {
+      min-height: initial !important;
+    }
+
     .choice {
       margin-top: 10px;
       min-height: initial;

@@ -63,7 +63,7 @@
             <div class="tab-pane active" id="category">
               <h4 class="info-text">QUEL TYPE DE PRODUIT RECHERCHEZ-VOUS ?</h4>
               <div class="row">
-                <div class="col-sm-4 col-xs-4" style="min-height: 150px;">
+                <div class="col-sm-4 col-xs-4 my-category" style="min-height: 150px;">
                   <a href="#fenetres" data-toggle="tab" (click)="setCategory('Fenêtres et porte-fenêtres')">
                     <div class="choice" data-toggle="wizard-radio" rel="tooltip">
                       <input type="radio" formControlName="category" value="Fenêtres et porte-fenêtres">
@@ -74,7 +74,7 @@
                     </div>
                   </a>
                 </div>
-                <div class="col-sm-4 col-xs-4" style="min-height: 150px;">
+                <div class="col-sm-4 col-xs-4 my-category" style="min-height: 150px;">
                   <a href="#baies" data-toggle="tab" (click)="setCategory('Baie coulissante')">
                     <div class="choice" data-toggle="wizard-radio" rel="tooltip">
                       <input type="radio" formControlName="category" value="Baie coulissante">
@@ -85,7 +85,7 @@
                     </div>
                   </a>
                 </div>
-                <div class="col-sm-4 col-xs-4" style="min-height: 150px;">
+                <div class="col-sm-4 col-xs-4 my-category" style="min-height: 150px;">
                   <a href="#volets" data-toggle="tab" (click)="setCategory('Volets')">
                     <div class="choice" data-toggle="wizard-radio" rel="tooltip">
                       <input type="radio" formControlName="category" value="Volets">
@@ -96,7 +96,7 @@
                     </div>
                   </a>
                 </div>
-                <div class="col-sm-4 col-xs-4" style="min-height: 150px;">
+                <div class="col-sm-4 col-xs-4 my-category" style="min-height: 150px;">
                   <a href="#portes" data-toggle="tab" (click)="setCategory('Porte d\'entrée')">
                     <div class="choice" data-toggle="wizard-radio" rel="tooltip">
                       <input type="radio" formControlName="category" value="Porte d'entrée">
@@ -107,7 +107,7 @@
                     </div>
                   </a>
                 </div>
-                <div class="col-sm-4 col-xs-4" style="min-height: 150px;">
+                <div class="col-sm-4 col-xs-4 my-category" style="min-height: 150px;">
                   <a href="#portails" data-toggle="tab" (click)="setCategory('Portails et clôtures')">
                     <div class="choice" data-toggle="wizard-radio" rel="tooltip">
                       <input type="radio" formControlName="category" value="Portails et clôtures">
@@ -413,7 +413,7 @@
                 <div class="col-sm-12">
                   <h4 class="info-text">FINALISER VOTRE DEMANDE</h4>
                 </div>
-                <div class="col-sm-6" [class.col-xs-6]="hasSmallScreen()">
+                <div class="col-sm-6">
                   <div class="input-group">
                     <span class="input-group-addon">
                       <i class="service-icon icon-user" style="font-size: 20px; line-height: 30px;"></i>
@@ -443,7 +443,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-6" [class.col-xs-6]="hasSmallScreen()">
+                <div class="col-sm-6">
                   <div class="input-group">
                     <span class="input-group-addon">
                       <i class="service-icon icon-map" style="font-size: 20px; line-height: 30px;"></i>
