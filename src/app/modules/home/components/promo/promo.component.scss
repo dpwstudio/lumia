@@ -1,16 +1,33 @@
 .promo-section {
-	height: initial;
-	padding: 4em 0;
+  height: initial;
+  padding: 4em 0;
+
+  .container {
+    .banner {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    @media screen and (max-width: 500px) {
+      .banner {
+        flex-direction: column;
+		  img {
+			  margin-top: 3em;
+		  }
+      }
+    }
+  }
 }
 
 .btn-theme {
-	border-radius: 5px;
-	background-color: #3164B3;
-	border: none;
-	color: white;
- 
-	&:hover {
-	  background-color: #204c8d;
-	  color: white;
-	}
- }
+  border-radius: 5px;
+  background-color: #3164B3;
+  border: none;
+  color: white;
+
+  &:hover {
+    background-color: #204c8d;
+    color: white;
+  }
+}
