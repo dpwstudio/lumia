@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { Product } from 'src/app/models/Product.model';
 
 @Component({
@@ -10,9 +11,12 @@ export class PorteComponent implements OnInit {
   doors: Product[] = [];
   showDevis = false;
 
-  constructor() { }
+  constructor(
+    private title: Title
+  ) { }
 
   ngOnInit(): void {
+    this.title.setTitle('Portes d\'entrées Paris, Ile de France – Installateur Agrée – Lumia Ouvertures');
     this.doors = [
       {
         img: 'assets/img/porte/porte-pvc.jpg',

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { Product } from 'src/app/models/Product.model';
 
 @Component({
@@ -10,9 +11,12 @@ export class FenetreComponent implements OnInit {
   windows: Product[] = [];
   showDevis = false;
 
-  constructor() { }
+  constructor(
+    private title: Title
+  ) { }
 
   ngOnInit(): void {
+    this.title.setTitle('Fenêtres et portes-fenêtres Paris, Ile de France – Installateur Agrée – Lumia Ouvertures');
     this.windows = [
       {
         img: 'assets/img/fenetre/fenetre-pvc2.jpg',

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 import { Product } from 'src/app/models/Product.model';
 
 @Component({
@@ -9,9 +10,12 @@ import { Product } from 'src/app/models/Product.model';
 export class VoletComponent implements OnInit {
   shutters: Product[] = [];
   showDevis = false;
-  constructor() { }
+  constructor(
+    private title: Title,
+  ) { }
 
   ngOnInit(): void {
+    this.title.setTitle('Volets roulants Paris, Ile de France – Installateur Agrée – Lumia Ouvertures');
     this.shutters = [
       {
         img: 'assets/img/volets/volet-encastre.png',
