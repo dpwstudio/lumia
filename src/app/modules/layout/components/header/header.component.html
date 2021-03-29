@@ -57,7 +57,7 @@
       </div>
       <div class="btn-group">
         <button (click)="showDevis = true" class="btn btn-primary">Devis gratuit</button>
-        <button (click)="showDevis = true" class="btn btn-primary btn-call">Etre rappelé</button>
+        <button (click)="showContact = true" class="btn btn-primary btn-call">Etre rappelé</button>
       </div>
     </div>
     <div class="scrollmenu">
@@ -76,3 +76,4 @@
 </header>
 <!--========== END HEADER ==========-->
 <app-devis [isVisible]="showDevis" (toggle)="showDevis = $event"></app-devis>
+<app-contact [isVisible]="showContact" (toggle)="showContact = $event"></app-contact>

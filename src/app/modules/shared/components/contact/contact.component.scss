@@ -89,6 +89,7 @@ button:hover {
   align-items: stretch;
   flex-direction: row-reverse;
   border-radius: 25px;
+  margin: 0 10px;
 }
 
 .contact100-more {
@@ -102,7 +103,7 @@ button:hover {
   background-position: center;
   position: relative;
   z-index: 1;
-  padding: 30px 15px 0px 15px;
+  padding: 30px 15px;
 }
 
 @media screen and (max-width: 500px) {
