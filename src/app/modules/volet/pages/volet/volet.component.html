@@ -33,6 +33,11 @@
       </div>
       <h4 class="text-center">{{shutter.title}}</h4>
       <p>{{shutter.text}}</p>
+      <!-- <button type="button" class="btn btn-primary btn-modal" data-toggle="modal" data-target="#exampleModalCenter"
+        (click)="toggleModal(shutter)">
+        En savoir plus
+        <i class="fas fa-arrow-right" style="margin-left: 5px;"></i>
+      </button> -->
     </div>
   </div>
   <!--// end row -->
@@ -69,3 +74,28 @@
 
 <!--========== END PAGE LAYOUT ==========-->
 <app-devis [isVisible]="showDevis" (toggle)="showDevis = $event"></app-devis>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true" *ngIf="product">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">{{product.title}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="modal-body" style="display: flex; flex-direction: row; align-items: center;">
+        <div class="row">
+          <div class="col-md-5 col-xs-12 text-center">
+            <img src="{{product.img}}" alt="" width="200">
+          </div>
+          <div class="col-md-7 col-xs-12">
+            <p>{{product.longText}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

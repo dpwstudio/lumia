@@ -10,6 +10,8 @@ import { Product } from 'src/app/models/Product.model';
 export class VoletComponent implements OnInit {
   shutters: Product[] = [];
   showDevis = false;
+  product: Product | undefined;
+
   constructor(
     private title: Title,
   ) { }
@@ -33,6 +35,10 @@ export class VoletComponent implements OnInit {
         text: 'Montage sans interférer avec la structure du bâtiment, 3 formes du coffre au choix'
       }
     ];
+  }
+  
+  toggleModal(product: Product | undefined) {
+    this.product = product;
   }
 
 }

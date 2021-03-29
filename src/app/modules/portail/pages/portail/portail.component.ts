@@ -10,6 +10,7 @@ import { Product } from 'src/app/models/Product.model';
 export class PortailComponent implements OnInit {
   portals: Product[] = [];
   showDevis = false;
+  product: Product | undefined;
 
   constructor(
     private title: Title
@@ -40,4 +41,9 @@ export class PortailComponent implements OnInit {
       }
     ]
   }
+
+  toggleModal(product: Product | undefined) {
+    this.product = product;
+  }
+
 }
