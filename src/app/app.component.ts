@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   showDevis = false;
+  showContact = false;
   title = 'lumia';
 }

@@ -2,5 +2,7 @@
 <router-outlet></router-outlet>
 <app-footer></app-footer>
 
-<button (click)="showDevis = true" class="btn btn-info">DEVIS <br> EN LIGNE</button>
+<button (click)="showDevis = true" class="btn btn-info btn-devis">DEVIS <br> EN LIGNE</button>
+<button (click)="showContact = true" class="btn btn-info btn-call">ETRE <br> RAPPELE</button>
 <app-devis [isVisible]="showDevis" (toggle)="showDevis = $event"></app-devis>
+<app-contact [isVisible]="showContact" (toggle)="showContact = $event"></app-contact>

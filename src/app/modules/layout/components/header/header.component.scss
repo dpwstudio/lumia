@@ -158,5 +158,20 @@
         color: #515769
       }
     }
+
+    .btn-group {
+      width: 122px;
+      .btn {
+        padding: 1px 20px;
+        width: 100%;
+        font-size: 10px;
+        margin: 2px;
+      }
+      .btn-call {
+        color: #3164B3;
+        background-color: white;
+        border: 1px solid #3164B3;
+      }
+    }
   }
 }
