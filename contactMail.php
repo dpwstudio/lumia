@@ -13,6 +13,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
 		 $params = json_decode($json);
 
 		 $name = trim(stripslashes($params->name));
+		 $phone = trim(stripslashes($params->phone));
 		 $email = trim(stripslashes($params->email));
 		 $sujet = trim(stripslashes($params->subject));
 		 $detailMessage = $params->message;
@@ -226,6 +227,11 @@ switch ($_SERVER['REQUEST_METHOD']) {
                         <td align="left"
                           style="padding: 20px 0 0 0; font-size: 16px; line-height: 25px; font-family: Helvetica Neue, Arial, sans-serif; color: #666666;"
                           class="padding">De => ' . $name . '</td>
+                      </tr>
+                      <tr>
+                        <td align="left"
+                          style="padding: 20px 0 0 0; font-size: 16px; line-height: 25px; font-family: Helvetica Neue, Arial, sans-serif; color: #666666;"
+                          class="padding">Téléphone => ' . $phone . '</td>
                       </tr>
                       <tr>
                         <td align="left"
